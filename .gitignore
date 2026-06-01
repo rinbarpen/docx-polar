@@ -1,0 +1,19 @@
+# Input documents (not uploaded)
+inputs/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Lock files
+.~lock.*#
+
+# Environment
+.env
+.venv
+venv/
