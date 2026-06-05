@@ -11,6 +11,7 @@ Extracts formatting templates from reference `.doc`/`.docx` files, applies seman
 ├── templates/            # Reference template documents
 ├── outputs/              # Processed output documents
 ├── tests/                # Unit tests
+├── skills/               # Agent skill definitions (mirror of .claude/skills/)
 └── .claude/skills/       # Agent skill definitions
 ```
 
