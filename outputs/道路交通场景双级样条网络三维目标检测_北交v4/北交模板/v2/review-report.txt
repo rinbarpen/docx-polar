@@ -1,0 +1,98 @@
+[
+  {
+    "category": "page_layout",
+    "status": "PASS",
+    "summary": "all dimensions match",
+    "details": []
+  },
+  {
+    "category": "doc_defaults",
+    "status": "PASS",
+    "summary": "all defaults match",
+    "details": []
+  },
+  {
+    "category": "paragraph_styles",
+    "status": "WARN",
+    "summary": "49/49 exist, 32 property mismatch(es)",
+    "details": [
+      "  'Normal'.paragraph.widowControl: missing (expected 'True')",
+      "  'Heading1'.paragraph.keepNext: missing (expected 'True')",
+      "  'Heading1'.paragraph.outlineLevel: missing (expected '0')",
+      "  'List'.run.font: missing (expected '')",
+      "  'Caption'.run.font: missing (expected '')",
+      "  'Index'.run.font: missing (expected '')",
+      "  '1'.run.font: missing (expected '宋体;SimSun')",
+      "  '1'.run.fontSize: unexpected value '21'",
+      "  '1'.run.fontSizeCs: unexpected value '24'",
+      "  '1'.paragraph.alignment: unexpected value 'both'",
+      "  '1'.paragraph.spacing_after: missing (expected '170')",
+      "  '1'.paragraph.spacing_before: missing (expected '170')",
+      "  '1'.paragraph.spacing_line: expected '314', got '360'",
+      "  '1'.paragraph.spacing_lineRule: expected 'exact', got 'auto'",
+      "  '2'.run.fontSize: expected '21', got '44'",
+      "  '4'.paragraph.alignment: unexpected value 'left'",
+      "  '4'.paragraph.indent_hanging: missing (expected '0')",
+      "  '4'.paragraph.indent_left: missing (expected '1260')",
+      "  '5'.paragraph.alignment: unexpected value 'left'",
+      "  '5'.paragraph.indent_hanging: missing (expected '0')",
+      "  '5'.paragraph.indent_left: missing (expected '1680')",
+      "  '6'.paragraph.alignment: unexpected value 'left'",
+      "  '6'.paragraph.indent_hanging: missing (expected '0')",
+      "  '6'.paragraph.indent_left: missing (expected '2100')",
+      "  '7'.paragraph.indent_hanging: missing (expected '0')",
+      "  '7'.paragraph.indent_left: missing (expected '2520')",
+      "  '8'.paragraph.indent_hanging: missing (expected '0')",
+      "  '8'.paragraph.indent_left: missing (expected '2940')",
+      "  '9'.paragraph.indent_hanging: missing (expected '0')",
+      "  '9'.paragraph.indent_left: missing (expected '3360')",
+      "  'Style34'.paragraph.widowControl: missing (expected 'True')",
+      "  'TableContents'.paragraph.widowControl: missing (expected 'True')"
+    ]
+  },
+  {
+    "category": "character_styles",
+    "status": "FAIL",
+    "summary": "0/10 exist, 10 missing",
+    "details": [
+      "  style 'WW8Num1z0': missing in output",
+      "  style 'WW8Num4z0': missing in output",
+      "  style 'WW8Num7z0': missing in output",
+      "  style 'WW8Num9z0': missing in output",
+      "  style 'Style13': missing in output",
+      "  style 'PageNumber': missing in output",
+      "  style 'Style14': missing in output",
+      "  style 'FootnoteCharacters': missing in output",
+      "  style 'Char': missing in output",
+      "  style 'Char1': missing in output"
+    ]
+  },
+  {
+    "category": "theme",
+    "status": "SKIP",
+    "summary": "no theme in template",
+    "details": []
+  },
+  {
+    "category": "font_table",
+    "status": "PASS",
+    "summary": "9 fonts declared",
+    "details": []
+  },
+  {
+    "category": "numbering",
+    "status": "PASS",
+    "summary": "3/3 found",
+    "details": []
+  },
+  {
+    "category": "direct_formatting",
+    "status": "PASS",
+    "summary": "no direct formatting found",
+    "details": []
+  },
+  {
+    "category": "overall",
+    "status": "FAIL"
+  }
+]

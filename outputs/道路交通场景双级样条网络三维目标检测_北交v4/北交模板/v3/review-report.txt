@@ -1,0 +1,58 @@
+[
+  {
+    "category": "page_layout",
+    "status": "PASS",
+    "summary": "all dimensions match",
+    "details": []
+  },
+  {
+    "category": "doc_defaults",
+    "status": "PASS",
+    "summary": "all defaults match",
+    "details": []
+  },
+  {
+    "category": "paragraph_styles",
+    "status": "WARN",
+    "summary": "49/49 exist, 3 property mismatch(es)",
+    "details": [
+      "  'List'.run.font: missing (expected '')",
+      "  'Caption'.run.font: missing (expected '')",
+      "  'Index'.run.font: missing (expected '')"
+    ]
+  },
+  {
+    "category": "character_styles",
+    "status": "PASS",
+    "summary": "10/10 exist",
+    "details": []
+  },
+  {
+    "category": "theme",
+    "status": "SKIP",
+    "summary": "no theme in template",
+    "details": []
+  },
+  {
+    "category": "font_table",
+    "status": "PASS",
+    "summary": "9 fonts declared",
+    "details": []
+  },
+  {
+    "category": "numbering",
+    "status": "PASS",
+    "summary": "3/3 found",
+    "details": []
+  },
+  {
+    "category": "direct_formatting",
+    "status": "PASS",
+    "summary": "no direct formatting found",
+    "details": []
+  },
+  {
+    "category": "overall",
+    "status": "PASS"
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "category": "page_layout",
+    "status": "PASS",
+    "summary": "all dimensions match",
+    "details": []
+  },
+  {
+    "category": "doc_defaults",
+    "status": "PASS",
+    "summary": "all defaults match",
+    "details": []
+  },
+  {
+    "category": "paragraph_styles",
+    "status": "WARN",
+    "summary": "49/49 exist, 2 property mismatch(es)",
+    "details": [
+      "  'Heading'.run.fontEastAsia: missing (expected '黑体;SimHei')",
+      "  'Footnote'.run.fontEastAsia: missing (expected '幼圆')"
+    ]
+  },
+  {
+    "category": "character_styles",
+    "status": "PASS",
+    "summary": "10/10 exist",
+    "details": []
+  },
+  {
+    "category": "theme",
+    "status": "SKIP",
+    "summary": "no theme in template",
+    "details": []
+  },
+  {
+    "category": "font_table",
+    "status": "PASS",
+    "summary": "9 fonts declared",
+    "details": []
+  },
+  {
+    "category": "numbering",
+    "status": "PASS",
+    "summary": "3/3 found",
+    "details": []
+  },
+  {
+    "category": "body_paragraph_formats",
+    "status": "SKIP",
+    "summary": "body_paragraph_formats used for style enrichment, not index review",
+    "details": []
+  },
+  {
+    "category": "direct_formatting",
+    "status": "PASS",
+    "summary": "direct formatting governed by body_paragraph_formats",
+    "details": [
+      "  867 run-level, 805 paragraph-level, 250 paragraph-run-level"
+    ]
+  },
+  {
+    "category": "overall",
+    "status": "PASS"
+  }
+]
