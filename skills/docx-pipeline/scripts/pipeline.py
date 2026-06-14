@@ -24,21 +24,28 @@ from pathlib import Path
 
 import yaml
 
-_PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent.parent
-_SKILLS_DIR = _PROJECT_ROOT / ".claude" / "skills"
+_SELF_DIR = Path(__file__).resolve().parent  # .../skills/docx-pipeline/scripts/
+_SKILLS_DIR = _SELF_DIR.parent.parent  # .../skills/
+_PROJECT_ROOT = _SKILLS_DIR.parent  # docx-polar root
 
 EXTRACT_SCRIPT = _SKILLS_DIR / "docx-template-extract" / "scripts" / "extract_template.py"
 APPLY_SCRIPT = _SKILLS_DIR / "docx-template-apply" / "scripts" / "apply_template.py"
 REVIEW_SCRIPT = _SKILLS_DIR / "docx-template-review" / "scripts" / "review_template.py"
+CITATION_SCRIPT = _SKILLS_DIR / "docx-citation-claim" / "scripts" / "check_citations.py"
+CONTENT_REVIEW_SCRIPT = _SKILLS_DIR / "docx-review" / "scripts" / "review_content.py"
+GENERATE_SCRIPT = _SKILLS_DIR / "docx-write" / "scripts" / "write_docx.py"
 
 
-def _check_skills():
+def _check_skills(*, check_generate: bool = False):
     missing = []
     for name, path in [("docx-template-extract", EXTRACT_SCRIPT),
                        ("docx-template-apply", APPLY_SCRIPT),
-                       ("docx-template-review", REVIEW_SCRIPT)]:
+                       ("docx-template-review", REVIEW_SCRIPT),
+                       ("docx-citation-claim", CITATION_SCRIPT)]:
         if not path.exists():
             missing.append(name)
+    if check_generate and not GENERATE_SCRIPT.exists():
+        missing.append("docx-write")
     if missing:
         print(f"Error: required skills not found: {', '.join(missing)}", file=sys.stderr)
         sys.exit(1)
@@ -160,6 +167,83 @@ def _review_once(output_path: Path, template_name: str, paper_name: str,
     return not has_fail
 
 
+def _check_citations_once(docx_path: Path, threshold: float = 0.6,
+                          output_dir: Path | None = None) -> bool:
+    """Run citation check phase, return True if all citations are REAL."""
+    citation_output = (output_dir / "citation-report.json") if output_dir else None
+    citation_cmd = [
+        sys.executable, str(CITATION_SCRIPT), str(docx_path),
+        "--threshold", str(threshold),
+        "--source", "auto",
+    ]
+    if citation_output:
+        citation_cmd.extend(["--output", str(citation_output)])
+
+    # Run without _run_phase to allow non-zero exit (fake citations)
+    print(f"\n── Checking citations ──")
+    result = subprocess.run(citation_cmd, capture_output=True, text=True)
+    if result.stdout:
+        print(result.stdout)
+    if result.stderr:
+        print(result.stderr, file=sys.stderr, end="")
+
+    passed = True
+    try:
+        report = json.loads(result.stdout.strip())
+        passed = report.get("passed", False)
+        total = report.get("total", 0)
+        real = report.get("real", 0)
+        fake = report.get("fake", 0)
+        unverified = report.get("unverified", 0)
+        errors = report.get("error", 0)
+        print(f"\n  Citation Summary: {total} total, {real} REAL, {unverified} UNVERIFIED, {fake} FAKE, {errors} ERROR")
+        if fake > 0 or errors > 0:
+            print(f"\n  ❌ {fake} fake / {errors} error citations found — needs fixing.")
+            for c in report.get("citations", []):
+                if c.get("status") in ("FAKE", "ERROR"):
+                    print(f"     [{c['index']}] {c['status']}: {c['text'][:80]}...")
+        else:
+            print(f"\n  ✅ All citations verified as REAL.")
+    except (json.JSONDecodeError, KeyError) as e:
+        print(f"  Warning: could not parse citation report: {e}", file=sys.stderr)
+        passed = False
+
+    return passed
+
+
+def _review_content_once(output_path: Path, output_dir: Path,
+                        dpi_threshold: int = 300) -> bool:
+    """Run content review phase, return True if PASS (no FAIL)."""
+    if not CONTENT_REVIEW_SCRIPT.exists():
+        print("  Warning: docx-review skill not found, skipping content review.",
+              file=sys.stderr)
+        return True
+
+    content_report = output_dir / "content-review-report.txt"
+    cmd = [
+        sys.executable, str(CONTENT_REVIEW_SCRIPT), str(output_path),
+        "--output", str(content_report),
+        "--json",
+        "--dpi-threshold", str(dpi_threshold),
+    ]
+    stdout = _run_phase("Phase 5: Reviewing content (images & tables)", cmd)
+
+    has_fail = True
+    try:
+        data = json.loads(stdout)
+        for entry in data:
+            if entry.get("category") == "overall":
+                has_fail = entry.get("status") == "FAIL"
+                break
+    except (json.JSONDecodeError, IndexError):
+        pass
+
+    if content_report.exists():
+        print(content_report.read_text(encoding="utf-8"))
+
+    return not has_fail
+
+
 def _fmt(val):
     """Format a value for table display."""
     if val is None:
@@ -173,7 +257,10 @@ def _dxa_to_mm(dxa):
     """Convert DXA (twentieth of a point) to approximate mm."""
     if dxa is None:
         return "-"
-    return f"{dxa * 25.4 / 1440:.1f}mm"
+    try:
+        return f"{float(str(dxa).replace('pt','')) * 25.4 / 72:.1f}mm"
+    except (ValueError, TypeError):
+        return str(dxa)
 
 
 def _show_template_review(template_path: Path):
@@ -216,7 +303,11 @@ def _show_template_review(template_path: Path):
             print(f"  {'Font':<20} {_fmt(dr.get('font'))}")
             print(f"  {'Font (EA)':<20} {_fmt(dr.get('fontEastAsia'))}")
             sz = dr.get('fontSize')
-            print(f"  {'Font Size':<20} {_fmt(sz)} ({int(sz / 2)}pt)" if sz else f"  {'Font Size':<20} -")
+            try:
+                pt_display = f"({int(int(sz) / 2)}pt)" if sz else ""
+            except (ValueError, TypeError):
+                pt_display = ""
+            print(f"  {'Font Size':<20} {_fmt(sz)} {pt_display}")
             print(f"  {'Font Color':<20} {_fmt(dr.get('fontColor'))}")
         if dp:
             print(f"  {'Spacing After':<20} {_fmt(dp.get('spacing_after'))} DXA")
@@ -296,14 +387,62 @@ def run_pipeline(
     apply_body_formats: bool = False,
     iterate: bool = False,
     max_iterations: int = 10,
+    citation_check: bool = False,
+    citation_iterate: bool = False,
+    citation_threshold: float = 0.6,
+    citation_max_iterations: int = 10,
+    content_review: bool = False,
+    content_dpi_threshold: int = 300,
+    generate_spec: str | None = None,
 ):
-    """Run the extract → apply → review pipeline, optionally iterating."""
-    _check_skills()
+    """Run the generate → extract → apply → review → citation-check → content-review pipeline."""
+    _check_skills(check_generate=bool(generate_spec))
 
-    ref_path = Path(reference_file).resolve()
+    # Phase 0: Generate DOCX from spec
+    if generate_spec:
+        spec_path = Path(generate_spec).resolve()
+        if not spec_path.exists():
+            print(f"Error: spec file not found: {generate_spec}", file=sys.stderr)
+            sys.exit(1)
+
+        if paper_name is None:
+            paper_name = spec_path.stem
+
+        gen_cmd = [
+            sys.executable, str(GENERATE_SCRIPT), str(spec_path),
+            "--skip-validate",
+        ]
+        if template_name:
+            gen_cmd.extend(["--category", template_name])
+        if paper_name:
+            gen_cmd.extend(["--paper", paper_name])
+        if version:
+            gen_cmd.extend(["--version", str(version)])
+
+        stdout = _run_phase("Phase 0: Generating DOCX from spec", gen_cmd)
+        # Extract output path from stdout
+        generated_path = None
+        for line in stdout.splitlines():
+            if line.startswith("Generated:"):
+                generated_path = line.split("Generated:", 1)[-1].strip()
+                break
+
+        if not generated_path:
+            # Fallback: construct from spec stem
+            generated_path = str(spec_path.with_suffix(".docx"))
+
+        target_file = generated_path
+        print(f"Generated: {target_file}")
+
+    # Now target_file is resolved
+    if not target_file:
+        print("Error: no target document specified (use --generate or provide target_docx)", file=sys.stderr)
+        sys.exit(1)
+
+    ref_path = Path(reference_file).resolve() if reference_file else None
     tgt_path = Path(target_file).resolve()
 
-    if not ref_path.exists():
+    if reference_file and not ref_path.exists():
         print(f"Error: reference not found: {ref_path}", file=sys.stderr)
         sys.exit(1)
     if not tgt_path.exists():
@@ -312,20 +451,32 @@ def run_pipeline(
 
     # Default names from file stems
     if template_name is None:
-        template_name = ref_path.stem
+        template_name = ref_path.stem if ref_path else paper_name or "default"
     if paper_name is None:
         paper_name = tgt_path.stem
 
-    print(f"=== docx-pipeline ===")
+    flags = []
+    if generate_spec:
+        flags.append("generate")
+    if citation_check:
+        flags.append("citation-check")
+    if citation_iterate:
+        flags.append("citation-iterate")
+    flags_str = f" [{', '.join(flags)}]" if flags else ""
+
+    print(f"=== docx-pipeline ==={flags_str}")
     print(f"Template: {template_name}")
     print(f"Paper:    {paper_name}")
     if version:
         print(f"Version:  {version}")
-    print(f"Reference: {ref_path}")
+    if ref_path:
+        print(f"Reference: {ref_path}")
+    if generate_spec:
+        print(f"Spec:      {generate_spec}")
     print(f"Target:   {tgt_path}")
 
     # Phase 1: Extract
-    if not skip_extract:
+    if not skip_extract and ref_path:
         styles_dir = _PROJECT_ROOT / "styles" / template_name
         styles_dir.mkdir(parents=True, exist_ok=True)
         template_output = styles_dir / f"{template_name}.yaml"
@@ -335,6 +486,9 @@ def run_pipeline(
             "--output", str(template_output),
         ]
         _run_phase("Phase 1: Extracting template", extract_cmd)
+    elif not ref_path:
+        print("\n── Phase 1: Skipped (no reference, using template if available) ──")
+        skip_extract = True
     else:
         print("\n── Phase 1: Skipped (--skip-extract) ──")
 
@@ -344,15 +498,20 @@ def run_pipeline(
     print(f"\n{'─' * 70}")
     print(f"  Template: {tpl_path_for_review}")
     print(f"{'─' * 70}")
-    print("\n  Edit the template YAML above if needed, then press Enter to apply.")
-    print("  (Ctrl+C to stop)")
-    try:
-        input()
-    except (EOFError, KeyboardInterrupt):
-        print("\nStopped.")
-        sys.exit(1)
+    # Skip interactive prompt in non-interactive mode
+    import os
+    if sys.stdin.isatty():
+        print("\n  Edit the template YAML above if needed, then press Enter to apply.")
+        print("  (Ctrl+C to stop)")
+        try:
+            input()
+        except (EOFError, KeyboardInterrupt):
+            print("\nStopped.")
+            sys.exit(1)
+    else:
+        print("\n  Non-interactive mode: proceeding automatically.")
 
-    # Phase 2+3: Apply → Review (possibly iterative)
+    # Phase 2+3: Apply → Review
     if iterate:
         # Find the styles template for user reference
         styles_dir = _PROJECT_ROOT / "styles" / template_name
@@ -362,6 +521,7 @@ def run_pipeline(
         current_major = _detect_next_major(paper_name, template_name)
         # version string: v{major}.0 for the first iteration of this pipeline run
         current_version = version if version else f"{current_major}.0"
+        formatting_passed = False
 
         for iteration in range(1, max_iterations + 1):
             print(f"\n{'='*50}")
@@ -377,15 +537,13 @@ def run_pipeline(
             # Review
             output_base = _PROJECT_ROOT / "outputs" / paper_name / template_name
             output_dir = output_base / f"v{actual_ver}"
-            passed = _review_once(output_path, template_name, paper_name, output_dir)
+            formatting_passed = _review_once(output_path, template_name, paper_name, output_dir)
 
-            if passed:
+            if formatting_passed:
                 print(f"\n✅ Review PASSED — formatting is correct!")
-                print(f"Final output: {output_path}")
-                return
+                break
 
             # Review failed — prepare for next iteration
-            # Increment minor version: 1.0 → 1.1 → 1.2
             ver_parts = current_version.split(".", 1)
             current_major = int(ver_parts[0])
             current_minor = int(ver_parts[1]) if len(ver_parts) > 1 else 1
@@ -395,16 +553,21 @@ def run_pipeline(
             print(f"Template file: {tpl_path}")
             print(f"Current output: {output_path}")
 
-            try:
-                input("Press Enter when ready (or Ctrl+C to stop)... ")
-            except (EOFError, KeyboardInterrupt):
-                print("\nStopped.")
-                sys.exit(1)
+            if sys.stdin.isatty():
+                try:
+                    input("Press Enter when ready (or Ctrl+C to stop)... ")
+                except (EOFError, KeyboardInterrupt):
+                    print("\nStopped.")
+                    sys.exit(1)
+            else:
+                print("Non-interactive: stopping after this iteration.")
 
             current_version = f"{current_major}.{next_minor}"
 
-        print(f"\nReached max iterations ({max_iterations}). Stopping.")
-        print(f"Last output: {output_path}")
+        if not formatting_passed:
+            print(f"\nReached max iterations ({max_iterations}). Stopping.")
+            print(f"Last output: {output_path}")
+            return
     else:
         # Single pass mode
         actual_ver, output_path = _apply_once(
@@ -416,16 +579,80 @@ def run_pipeline(
             output_dir = _PROJECT_ROOT / "outputs" / paper_name / template_name / f"v{actual_ver}"
             _review_once(output_path, template_name, paper_name, output_dir)
 
-        print(f"\nPipeline complete.")
-        print(f"Output: {output_path}")
+    # Phase 4: Citation check
+    if citation_check:
+        output_base = _PROJECT_ROOT / "outputs" / paper_name / template_name
+        output_dir = output_base / f"v{actual_ver}"
+
+        print(f"\n{'─' * 70}")
+        print("  Phase 4: Checking citations")
+        print(f"{'─' * 70}")
+
+        if citation_iterate:
+            for cit_iter in range(1, citation_max_iterations + 1):
+                print(f"\n{'='*50}")
+                print(f"Citation iteration {cit_iter}/{citation_max_iterations}")
+                print(f"{'='*50}")
+
+                citation_passed = _check_citations_once(
+                    output_path, citation_threshold, output_dir,
+                )
+
+                if citation_passed:
+                    print(f"\n✅ Citation check PASSED — all references are real!")
+                    break
+
+                if cit_iter < citation_max_iterations:
+                    print(f"\n❌ Citation check found issues (iteration {cit_iter}).")
+                    print(f"\nFix the references in the target DOCX, then save and press Enter to re-check.")
+                    print(f"Target file: {tgt_path}")
+                    print(f"Formatted output: {output_path}")
+
+                    if sys.stdin.isatty():
+                        try:
+                            input("Press Enter when ready (or Ctrl+C to stop)... ")
+                        except (EOFError, KeyboardInterrupt):
+                            print("\nStopped.")
+                            sys.exit(1)
+                    else:
+                        print("Non-interactive: stopping after this iteration.")
+                        break
+                else:
+                    print(f"\nReached max citation iterations ({citation_max_iterations}). Stopping.")
+
+            if not citation_passed:
+                print(f"\n⚠️  Citation check did NOT pass all checks.")
+        else:
+            citation_passed = _check_citations_once(
+                output_path, citation_threshold, output_dir,
+            )
+
+    # Phase 5: Content review (images & tables)
+    if content_review:
+        output_base = _PROJECT_ROOT / "outputs" / paper_name / template_name
+        output_dir = output_base / f"v{actual_ver}"
+        _review_content_once(output_path, output_dir, content_dpi_threshold)
+
+    print(f"\nPipeline complete.")
+    print(f"Output: {output_path}")
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="DOCX formatting pipeline: extract → apply → review"
+        description="DOCX formatting pipeline: generate → extract → apply → review"
     )
-    parser.add_argument("reference_docx", help="Reference Word document to extract template from")
-    parser.add_argument("target_docx", help="Target DOCX to format")
+    parser.add_argument(
+        "reference_docx", nargs="?",
+        help="Reference Word document to extract template from (optional with --generate)",
+    )
+    parser.add_argument(
+        "target_docx", nargs="?",
+        help="Target DOCX to format (optional with --generate)",
+    )
+    parser.add_argument(
+        "--generate", "-g",
+        help="YAML/JSON spec to generate DOCX from (Phase 0)",
+    )
     parser.add_argument("--template", "-t",
                         help="Template name (default: stem of reference docx)")
     parser.add_argument("--paper", "-p",
@@ -446,11 +673,32 @@ def main():
                              "Pauses after each iteration for template editing.")
     parser.add_argument("--max-iterations", type=int, default=10,
                         help="Max iterations in iterate mode (default: 10)")
+    parser.add_argument("--citation-check", action="store_true",
+                        help="Enable citation checking phase (Phase 4)")
+    parser.add_argument("--skip-citation-check", action="store_true",
+                        help="Skip citation checking phase")
+    parser.add_argument("--citation-iterate", action="store_true",
+                        help="Iterative mode for citation checking: loop check→fix→re-check until PASS")
+    parser.add_argument("--citation-threshold", type=float, default=0.6,
+                        help="Minimum confidence score (0.0–1.0) for REAL citation (default: 0.6)")
+    parser.add_argument("--citation-max-iterations", type=int, default=10,
+                        help="Max iterations in citation iterate mode (default: 10)")
+    parser.add_argument("--content-review", action="store_true",
+                        help="Enable content review phase (Phase 5) for images and tables")
+    parser.add_argument("--content-dpi-threshold", type=int, default=300,
+                        help="Minimum DPI for print-quality images (default: 300)")
     args = parser.parse_args()
 
+    if not args.generate and not args.reference_docx:
+        parser.error("either --generate or reference_docx is required")
+    if not args.generate and not args.target_docx:
+        parser.error("either --generate or target_docx is required")
+
+    citation_enabled = args.citation_check and not args.skip_citation_check
+
     run_pipeline(
-        args.reference_docx,
-        args.target_docx,
+        args.reference_docx or "",
+        args.target_docx or "",
         template_name=args.template,
         paper_name=args.paper,
         version=args.version,
@@ -460,6 +708,13 @@ def main():
         apply_body_formats=args.apply_body_formats,
         iterate=args.iterate,
         max_iterations=args.max_iterations,
+        citation_check=citation_enabled,
+        citation_iterate=args.citation_iterate,
+        citation_threshold=args.citation_threshold,
+        citation_max_iterations=args.citation_max_iterations,
+        content_review=args.content_review,
+        content_dpi_threshold=args.content_dpi_threshold,
+        generate_spec=args.generate,
     )
 
 

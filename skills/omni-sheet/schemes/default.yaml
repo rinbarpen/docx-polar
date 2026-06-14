@@ -1,0 +1,13 @@
+scheme:
+  name: "Default Academic"
+  description: "Clean modern tabular style"
+  defaults:
+    cell_padding: [4, 8]     # top/bottom, left/right in pt
+    header_font: "DejaVu Sans"
+    body_font: "DejaVu Sans"
+    font_size: 10
+    header_bold: true
+    header_bg: "#EEEEEE"
+    border_color: "#CCCCCC"
+    border_width: 1
+    alignment: "left"

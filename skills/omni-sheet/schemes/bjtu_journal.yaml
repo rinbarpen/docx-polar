@@ -1,0 +1,15 @@
+scheme:
+  name: "BJTU Journal Tables"
+  description: "Three-line table format for 北京交通大学学报"
+  defaults:
+    cell_padding: [3, 6]     # top/bottom, left/right in pt
+    header_font: "SimHei"
+    body_font: "SimSun"
+    font_size: 9
+    header_bold: true
+    header_bg: "#FFFFFF"
+    border_color: "#000000"
+    border_width: 1
+    alignment: "center"
+    style: "three_line"       # Only top, header-bottom, table-bottom rules
+    use_cjk: true

@@ -1,0 +1,99 @@
+# CVPR — Chapter Template
+venue:
+  name: "CVPR"
+  language: "en"
+  citation_format: "numbered"
+  page: { width: 12240, height: 15840, margins: { top: 1440, bottom: 1440, left: 1440, right: 1440 } }
+  style:
+    default_font: "Times New Roman"
+    default_font_size: 20   # 10pt
+    template_category: "cvpr"
+
+chapters:
+  - id: "introduction"
+    heading: "Introduction"
+    level: 1
+    word_count_min: 500
+    word_count_max: 1000
+    min_figures: 1     # Teaser figure
+    min_tables: 0
+    requirements_text: |
+      - Start with broad motivation
+      - Identify the specific problem
+      - State contributions clearly
+      - Include a teaser figure
+    topics:
+      - "Background and motivation"
+      - "Problem statement"
+      - "Contributions"
+
+  - id: "related_work"
+    heading: "Related Work"
+    level: 1
+    word_count_min: 300
+    word_count_max: 800
+    min_figures: 0
+    min_tables: 0
+    requirements_text: |
+      - Group prior work thematically
+      - Be concise — CVPR has page limits
+      - Clearly distinguish from this paper
+    topics:
+      - "Related area 1"
+      - "Related area 2"
+
+  - id: "method"
+    heading: "Method"
+    level: 1
+    word_count_min: 1500
+    word_count_max: 3000
+    min_figures: 1     # Architecture figure
+    min_tables: 0
+    requirements_text: |
+      - Present the approach clearly
+      - Use mathematical notation where needed
+      - Include an architecture/framework figure
+      - Explain each component's purpose
+    topics:
+      - "Method overview"
+      - "Component details"
+      - "Training procedure"
+
+  - id: "experiments"
+    heading: "Experiments"
+    level: 1
+    word_count_min: 1500
+    word_count_max: 3000
+    min_figures: 2
+    min_tables: 2
+    requirements_text: |
+      - Standard CV datasets
+      - Compare with SOTA methods
+      - Ablation studies essential
+      - Qualitative results (visual comparisons)
+      - Use omni-draw for figures, omni-sheet for tables
+    topics:
+      - "Experimental setup"
+      - "Main results"
+      - "Ablation studies"
+      - "Qualitative results"
+
+  - id: "conclusion"
+    heading: "Conclusion"
+    level: 1
+    word_count_min: 200
+    word_count_max: 500
+    min_figures: 0
+    min_tables: 0
+    requirements_text: |
+      - Brief summary of contributions
+      - Limitations (1-2 sentences)
+      - Broader impact statement (CVPR requirement)
+    topics:
+      - "Summary"
+      - "Limitations and future work"
+
+back_matter:
+  - element: "references"
+    min_count: 25
+    format: "numbered"

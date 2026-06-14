@@ -1,0 +1,70 @@
+[
+  {
+    "category": "page_layout",
+    "status": "PASS",
+    "summary": "all dimensions match",
+    "details": []
+  },
+  {
+    "category": "doc_defaults",
+    "status": "PASS",
+    "summary": "all defaults match",
+    "details": []
+  },
+  {
+    "category": "paragraph_styles",
+    "status": "WARN",
+    "summary": "60/60 exist, 1 property mismatch(es)",
+    "details": [
+      "  'Style16'.paragraph.shading: missing (expected '{'val': 'clear', 'fill': '000080'}')"
+    ]
+  },
+  {
+    "category": "character_styles",
+    "status": "PASS",
+    "summary": "54/54 exist",
+    "details": []
+  },
+  {
+    "category": "theme",
+    "status": "SKIP",
+    "summary": "no theme in template",
+    "details": []
+  },
+  {
+    "category": "font_table",
+    "status": "PASS",
+    "summary": "11 fonts declared",
+    "details": []
+  },
+  {
+    "category": "numbering",
+    "status": "PASS",
+    "summary": "4/4 found",
+    "details": []
+  },
+  {
+    "category": "body_paragraph_formats",
+    "status": "SKIP",
+    "summary": "body_paragraph_formats used for style enrichment, not index review",
+    "details": []
+  },
+  {
+    "category": "semantic_format_rules",
+    "status": "PASS",
+    "summary": "96 paragraph(s) match strict semantic rules",
+    "details": []
+  },
+  {
+    "category": "direct_formatting",
+    "status": "PASS",
+    "summary": "direct formatting governed by body_paragraph_formats",
+    "details": [
+      "  309 run-level, 202 paragraph-level, 292 paragraph-run-level"
+    ]
+  },
+  {
+    "category": "overall",
+    "status": "PASS"
+  }
+]

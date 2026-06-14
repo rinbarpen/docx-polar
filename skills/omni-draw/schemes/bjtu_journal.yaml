@@ -1,0 +1,17 @@
+scheme:
+  name: "BJTU Journal Figures"
+  description: "Black-and-white, SimSun font, 300 DPI for 北京交通大学学报"
+  defaults:
+    dpi: 300
+    format: "png"
+    width: 800
+    height: 500
+    color_palette: ["#000000", "#555555", "#AAAAAA", "#333333", "#777777"]
+    font_family: "SimSun"
+    font_size: 9
+    title_font_size: 10
+    line_width: 1.5
+    grid: false
+    legend_position: "upper right"
+    figure_frame: true
+    grayscale: true

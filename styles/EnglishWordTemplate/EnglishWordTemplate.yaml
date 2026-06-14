@@ -1,0 +1,2428 @@
+document_defaults:
+  run:
+    font: Times New Roman
+    fontEastAsia: SimSun
+paragraph_styles:
+- id: Normal
+  name: null
+  paragraph:
+    alignment: start
+  run:
+    italic: true
+- id: Heading1
+  name: null
+  basedOn: Normal
+  next: Normal
+  run:
+    smallCaps: true
+    fontEastAsia: MS Mincho
+    italic: true
+  paragraph:
+    spacing_before: 8pt
+    spacing_after: 4pt
+    indent_firstLine: 0pt
+    outlineLevel: 0
+    keepNext: true
+- id: Heading2
+  name: null
+  basedOn: Normal
+  next: Normal
+  run:
+    italic: true
+  paragraph:
+    spacing_before: 6pt
+    spacing_after: 3pt
+    alignment: start
+    outlineLevel: 1
+    keepNext: true
+- id: Heading3
+  name: null
+  basedOn: Normal
+  next: Normal
+  run:
+    italic: true
+  paragraph:
+    spacing_line: 12pt
+    spacing_lineRule: exact
+    indent_firstLine: 14.40pt
+    alignment: both
+    outlineLevel: 2
+- id: Heading4
+  name: null
+  basedOn: Normal
+  next: Normal
+  run:
+    italic: true
+  paragraph:
+    spacing_before: 2pt
+    spacing_after: 2pt
+    indent_firstLine: 25.20pt
+    alignment: both
+    outlineLevel: 3
+- id: Heading5
+  name: null
+  basedOn: Normal
+  next: Normal
+  run:
+    smallCaps: true
+    italic: true
+  paragraph:
+    spacing_before: 8pt
+    spacing_after: 4pt
+    outlineLevel: 4
+- id: Abstract
+  name: null
+  run:
+    fontSize: 18
+    fontSizeCs: 18
+    bold: true
+    italic: true
+  paragraph:
+    spacing_after: 10pt
+    indent_firstLine: 13.60pt
+    alignment: both
+- id: Affiliation
+  name: null
+  paragraph:
+    alignment: center
+- id: Author
+  name: null
+  run:
+    fontSize: 18
+    fontSizeCs: 18
+  paragraph:
+    spacing_before: 5pt
+    spacing_after: 2pt
+    alignment: center
+- id: BodyText
+  name: null
+  basedOn: Normal
+  run:
+    fontSpacing: -1
+    bold: true
+  paragraph:
+    spacing_after: 6pt
+    spacing_line: 11.40pt
+    spacing_lineRule: auto
+    indent_firstLine: 14.40pt
+    alignment: both
+- id: bulletlist
+  name: null
+  basedOn: BodyText
+  paragraph:
+    indent_hanging: 14.40pt
+  run:
+    font: Symbol
+    italic: true
+- id: equation
+  name: null
+  basedOn: Normal
+  run:
+    font: Times New Roman
+    italic: true
+  paragraph:
+    spacing_before: 12pt
+    spacing_after: 12pt
+    spacing_line: 10.80pt
+    spacing_lineRule: auto
+- id: figurecaption
+  name: null
+  run:
+    fontSize: 16
+    fontSizeCs: 16
+    italic: true
+  paragraph:
+    spacing_before: 4pt
+    spacing_after: 10pt
+    indent_firstLine: 0pt
+    alignment: both
+- id: footnote
+  name: null
+  run:
+    fontSize: 16
+    fontSizeCs: 16
+  paragraph:
+    spacing_after: 2pt
+- id: papersubtitle
+  name: null
+  run:
+    fontEastAsia: MS Mincho
+    fontSize: 28
+    fontSizeCs: 28
+  paragraph:
+    spacing_after: 6pt
+    alignment: center
+- id: papertitle
+  name: null
+  run:
+    fontEastAsia: MS Mincho
+    fontSize: 48
+    fontSizeCs: 48
+  paragraph:
+    spacing_after: 5pt
+    alignment: center
+    spacing_before: 5pt
+- id: references
+  name: null
+  run:
+    fontEastAsia: MS Mincho
+    fontSize: 16
+    fontSizeCs: 16
+    italic: true
+  paragraph:
+    spacing_after: 2.50pt
+    spacing_line: 9pt
+    spacing_lineRule: exact
+    alignment: both
+    indent_hanging: 17.70pt
+- id: sponsors
+  name: null
+  run:
+    fontSize: 16
+    fontSizeCs: 16
+  paragraph:
+    indent_firstLine: 14.45pt
+- id: tablecolhead
+  name: null
+  basedOn: Normal
+  run:
+    fontSize: 16
+    fontSizeCs: 16
+    bold: true
+- id: tablecolsubhead
+  name: null
+  basedOn: tablecolhead
+  run:
+    fontSize: 15
+    fontSizeCs: 15
+    italic: true
+- id: tablecopy
+  name: null
+  run:
+    fontSize: 16
+    fontSizeCs: 16
+  paragraph:
+    alignment: both
+- id: tablefootnote
+  name: null
+  run:
+    fontSize: 12
+    fontSizeCs: 12
+    italic: true
+  paragraph:
+    spacing_before: 3pt
+    spacing_after: 1.50pt
+    indent_hanging: 1.45pt
+    alignment: end
+- id: tablehead
+  name: null
+  run:
+    fontSize: 16
+    fontSizeCs: 16
+    smallCaps: true
+  paragraph:
+    spacing_before: 12pt
+    spacing_after: 6pt
+    spacing_line: 10.80pt
+    spacing_lineRule: auto
+    alignment: center
+- id: Keywords
+  name: null
+  basedOn: Abstract
+  run:
+    italic: true
+    bold: true
+  paragraph:
+    spacing_after: 6pt
+    indent_firstLine: 13.70pt
+- id: Header
+  name: null
+  basedOn: Normal
+  paragraph: {}
+- id: Footer
+  name: null
+  basedOn: Normal
+  paragraph: {}
+character_styles:
+- id: DefaultParagraphFont
+  name: null
+- id: BodyTextChar
+  name: null
+  run:
+    fontSpacing: -1
+- id: HeaderChar
+  name: null
+  basedOn: DefaultParagraphFont
+- id: FooterChar
+  name: null
+  basedOn: DefaultParagraphFont
+page:
+  width: 595.30pt
+  height: 841.90pt
+  margins:
+    top: 54pt
+    bottom: 72pt
+    left: 44.65pt
+    right: 44.65pt
+    header: 36pt
+    footer: 36pt
+    gutter: 0pt
+  columns:
+    count: 2
+    space: 36pt
+  column_break_after: 6
+body_paragraph_formats:
+- index: 0
+  style: papertitle
+  textSample: 'Paper Title* (use style: paper title)'
+  paragraph:
+    spacing_before: 5pt
+    spacing_after: 5pt
+- index: 1
+  style: Author
+  textSample: '*Note: Sub-titles are not captured in Xplore and should not be used'
+  paragraph:
+    spacing_before: 5pt
+    spacing_after: 5pt
+  paragraph_run:
+    fontSize: 16
+    fontSizeCs: 16
+  run:
+    fontSize: 16
+    fontSizeCs: 16
+  runs:
+  - index: 0
+    run:
+      fontSize: 16
+      fontSizeCs: 16
+    textSample: '*'
+  - index: 1
+    run:
+      fontSize: 16
+      fontSizeCs: 16
+    textSample: 'Note: Sub-titles are not captured in Xplore and should not be used'
+- index: 2
+  style: Author
+  paragraph:
+    spacing_before: 5pt
+    spacing_after: 5pt
+    spacing_line: 6pt
+    spacing_lineRule: auto
+  paragraph_run:
+    fontSize: 16
+    fontSizeCs: 16
+- index: 3
+  style: Author
+  paragraph:
+    spacing_before: 5pt
+    spacing_after: 5pt
+    spacing_line: 6pt
+    spacing_lineRule: auto
+  paragraph_run:
+    fontSize: 16
+    fontSizeCs: 16
+- index: 4
+  style: Author
+  textSample: 'line 1: 1st Given Name Surname line 2: dept. name of organization (of
+    Affiliation)line 3: name of organization (of Affil'
+  paragraph:
+    spacing_before: 5pt
+  paragraph_run:
+    fontSize: 18
+    fontSizeCs: 18
+  run:
+    fontSize: 18
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: line 1
+  - index: 1
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: ': 1'
+  - index: 2
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: st
+  - index: 3
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+  - index: 4
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: Given Name Surname
+  - index: 5
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+  - index: 6
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 2:'
+  - index: 7
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+  - index: 8
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: dept. name of organization
+  - index: 9
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+  - index: 10
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+  - index: 11
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: (of
+  - index: 12
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: Affiliation
+  - index: 13
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: )
+  - index: 14
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+  - index: 15
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: li
+  - index: 16
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: ne
+  - index: 17
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: '3'
+  - index: 18
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: ':'
+  - index: 19
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: name of organization
+  - index: 20
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+  - index: 21
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: (of Affiliation)
+  - index: 22
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+  - index: 23
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: line
+  - index: 24
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: '4'
+  - index: 25
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: ': City, Country'
+  - index: 26
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+  - index: 27
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: line
+  - index: 28
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: '5: e'
+  - index: 29
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: ma
+  - index: 30
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: il address
+  - index: 31
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: or ORCID
+- index: 5
+  style: Author
+  textSample: 'line 1: 4th Given Name Surnameline 2: dept. name of organization(of
+    Affiliation)line 3: name of organization (of Affilia'
+  paragraph:
+    spacing_before: 5pt
+  paragraph_run:
+    fontSize: 18
+    fontSizeCs: 18
+  run:
+    fontSize: 18
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 1: 4'
+  - index: 1
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: th
+  - index: 2
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: Given Name Surname
+  - index: 3
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+  - index: 4
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 2:'
+  - index: 5
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: dept. name of organization
+  - index: 6
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+  - index: 7
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: (of
+  - index: 8
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: Affiliation
+  - index: 9
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: )
+  - index: 10
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 3:'
+  - index: 11
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: name of organization
+  - index: 12
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+  - index: 13
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: (of Affiliation)
+  - index: 14
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+  - index: 15
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 4: City, Country'
+  - index: 16
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 5: email address'
+  - index: 17
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+  - index: 18
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: or ORCID
+  - index: 19
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+  - index: 20
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 1: 2'
+  - index: 21
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: nd
+  - index: 22
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+  - index: 23
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: Given Name Surname
+  - index: 24
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 2:'
+  - index: 25
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: dept. name of organization
+  - index: 26
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+  - index: 27
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: (of
+  - index: 28
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: Affiliation
+  - index: 29
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: )
+  - index: 30
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 3:'
+  - index: 31
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: name of organization
+  - index: 32
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+  - index: 33
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: (of Affiliation)
+  - index: 34
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+  - index: 35
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 4: City, Country'
+  - index: 36
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 5: email address'
+  - index: 37
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: or ORCID
+- index: 6
+  style: Author
+  textSample: 'line 1: 5th Given Name Surnameline 2: dept. name of organization (of
+    Affiliation)line 3: name of organization (of Affili'
+  paragraph:
+    spacing_before: 5pt
+  paragraph_run:
+    fontSize: 18
+    fontSizeCs: 18
+  run:
+    fontSize: 18
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: li
+  - index: 1
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'ne 1:'
+  - index: 2
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: '5'
+  - index: 3
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: th
+  - index: 4
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: Given Name Surname
+  - index: 5
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 2:'
+  - index: 6
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: dept. name of organization
+  - index: 7
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+  - index: 8
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: (of
+  - index: 9
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: Affiliation
+  - index: 10
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: )
+  - index: 11
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 3:'
+  - index: 12
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: name of organization
+  - index: 13
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+  - index: 14
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: (of
+  - index: 15
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: A
+  - index: 16
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: ffiliation)
+  - index: 17
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+  - index: 18
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 4: City, Country'
+  - index: 19
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 5: email address'
+  - index: 20
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+  - index: 21
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: or ORCID
+  - index: 22
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+  - index: 23
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 1: 3'
+  - index: 24
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: rd
+  - index: 25
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+  - index: 26
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: Given Name Surname
+  - index: 27
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 2:'
+  - index: 28
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: dept. name of organization
+  - index: 29
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+  - index: 30
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: (of
+  - index: 31
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: Affiliation
+  - index: 32
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: )
+  - index: 33
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 3:'
+  - index: 34
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: name of organization
+  - index: 35
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+  - index: 36
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: (of Affiliation)
+  - index: 37
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+  - index: 38
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 4: City, Country'
+  - index: 39
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 5: email address'
+  - index: 40
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: or ORCID
+- index: 7
+  style: Author
+  textSample: 'line 1: 6th Given Name Surnameline 2: dept. name of organization (of
+    Affiliation)line 3: name of organization (of Affili'
+  paragraph:
+    spacing_before: 5pt
+  run:
+    fontSize: 18
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 1:'
+  - index: 1
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: '6'
+  - index: 2
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: th
+  - index: 3
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: Given Name Surname
+  - index: 4
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 2:'
+  - index: 5
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: dept. name of organization
+  - index: 6
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+  - index: 7
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: (of
+  - index: 8
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: Affiliation
+  - index: 9
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: )
+  - index: 10
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 3:'
+  - index: 11
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: name of organization
+  - index: 12
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+  - index: 13
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+    textSample: (of Affiliation)
+  - index: 14
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      italic: true
+  - index: 15
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 4: City, Country'
+  - index: 16
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: 'line 5: email address'
+  - index: 17
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+    textSample: or ORCID
+- index: 10
+  style: Abstract
+  textSample: Abstract—This electronic document is a “live” template and already defines
+    the components of your paper [title, text, he
+  paragraph_run:
+    italic: true
+  run:
+    italic: true
+  runs:
+  - index: 0
+    run:
+      italic: true
+    textSample: Abstract
+  - index: 5
+    run:
+      italic: true
+    textSample: '*'
+  - index: 6
+    run:
+      italic: true
+    textSample: 'CRITICAL:  Do'
+  - index: 7
+    run:
+      fontEastAsia: Times New Roman
+      italic: true
+  - index: 8
+    run:
+      italic: true
+    textSample: Not
+  - index: 9
+    run:
+      fontEastAsia: Times New Roman
+      italic: true
+  - index: 10
+    run:
+      italic: true
+    textSample: Use
+  - index: 11
+    run:
+      fontEastAsia: Times New Roman
+      italic: true
+  - index: 12
+    run:
+      italic: true
+    textSample: Symbols,
+  - index: 13
+    run:
+      fontEastAsia: Times New Roman
+      italic: true
+  - index: 14
+    run:
+      italic: true
+    textSample: Special
+  - index: 15
+    run:
+      fontEastAsia: Times New Roman
+      italic: true
+  - index: 16
+    run:
+      italic: true
+    textSample: Characters,
+  - index: 17
+    run:
+      fontEastAsia: Times New Roman
+      italic: true
+  - index: 18
+    run:
+      fontEastAsia: Times New Roman
+      italic: true
+    textSample: Footnotes,
+  - index: 19
+    run:
+      italic: true
+    textSample: or
+  - index: 20
+    run:
+      fontEastAsia: Times New Roman
+      italic: true
+  - index: 21
+    run:
+      italic: true
+    textSample: Math
+  - index: 22
+    run:
+      fontEastAsia: Times New Roman
+      italic: true
+  - index: 23
+    run:
+      italic: true
+    textSample: in
+  - index: 24
+    run:
+      fontEastAsia: Times New Roman
+      italic: true
+    textSample: Paper
+  - index: 25
+    run:
+      italic: true
+    textSample: Title
+  - index: 26
+    run:
+      fontEastAsia: Times New Roman
+      italic: true
+    textSample: o
+  - index: 27
+    run:
+      italic: true
+    textSample: r
+  - index: 28
+    run:
+      fontEastAsia: Times New Roman
+      italic: true
+  - index: 29
+    run:
+      italic: true
+    textSample: Abstract
+  - index: 32
+    run:
+      bold: true
+      italic: true
+    textSample: Abstract
+- index: 11
+  style: Keywords
+  textSample: Keywords—component, formatting, style, styling, insert (key words)
+  run:
+    bold: true
+  runs:
+  - index: 10
+    run:
+      bold: true
+    textSample: key words
+- index: 12
+  style: Heading1
+  textSample: Introduction (Heading 1)
+  run:
+    fontEastAsia: MS Mincho
+    italic: true
+  runs:
+  - index: 1
+    run:
+      fontEastAsia: MS Mincho
+      italic: true
+    textSample: Heading 1
+- index: 28
+  style: sponsors
+  textSample: Identify applicable funding agency here. If none, delete this text box.
+  paragraph:
+    indent_firstLine: 14.45pt
+- index: 29
+  style: bulletlist
+  textSample: 'Use a zero before decimal points: “0.25”, not “.25”. Use “cm3”, not
+    “cc”. (bullet list)'
+  run:
+    italic: true
+  runs:
+  - index: 2
+    run:
+      italic: true
+    textSample: bullet list
+- index: 33
+  style: equation
+  textSample: ab
+  run:
+    font: Times New Roman
+    italic: true
+  runs:
+  - index: 1
+    run:
+      font: Times New Roman
+      italic: true
+    textSample: a
+  - index: 5
+    run:
+      font: Times New Roman
+      italic: true
+    textSample: b
+- index: 37
+  style: bulletlist
+  textSample: The subscript for the permeability of vacuum 0, and other common scientific
+    constants, is zero with subscript formattin
+  run:
+    font: Symbol
+    italic: true
+  runs:
+  - index: 1
+    run:
+      font: Symbol
+      italic: true
+    textSample: 
+- index: 51
+  style: BodyText
+  textSample: The template is designed for, but not limited to, six authors. A minimum
+    of one author is required for all conference ar
+  run:
+    bold: true
+  runs:
+  - index: 0
+    run:
+      bold: true
+    textSample: The template is
+  - index: 1
+    run:
+      bold: true
+    textSample: designed
+  - index: 2
+    run:
+      bold: true
+    textSample: for,
+  - index: 3
+    run:
+      bold: true
+    textSample: but not limited to
+  - index: 4
+    run:
+      bold: true
+    textSample: ','
+  - index: 5
+    run:
+      bold: true
+  - index: 6
+    run:
+      bold: true
+    textSample: six
+  - index: 7
+    run:
+      bold: true
+    textSample: authors.
+- index: 52
+  style: Heading3
+  textSample: 'For papers with more than six authors: Add author names horizontally,
+    moving to a third row if needed for more than 8 au'
+  run:
+    italic: true
+  runs:
+  - index: 1
+    run:
+      italic: true
+    textSample: Add author names horizontally, moving to a third row if needed for
+      more than 8 a
+- index: 53
+  style: Heading3
+  textSample: 'For papers with less than six authors: To change the default, adjust
+    the template as follows.'
+  run:
+    italic: true
+  runs:
+  - index: 5
+    run:
+      italic: true
+    textSample: To change the default, adjust the template as follows.
+- index: 54
+  style: Heading4
+  textSample: 'Selection: Highlight all author and affiliation lines.'
+  run:
+    italic: true
+  runs:
+  - index: 2
+    run:
+      italic: true
+    textSample: Highlight all author and affiliation lines.
+- index: 55
+  style: Heading4
+  textSample: 'Change number of columns: Select the Columns icon from the MS Word
+    Standard toolbar and then select the correct number o'
+  run:
+    italic: true
+  runs:
+  - index: 2
+    run:
+      italic: true
+    textSample: Select the Columns icon from the MS Word Standard toolbar and then
+      select
+  - index: 3
+    run:
+      italic: true
+    textSample: the correct number of columns
+  - index: 4
+    run:
+      italic: true
+    textSample: from the selection palette.
+- index: 56
+  style: Heading4
+  textSample: 'Deletion: Delete the author and affiliation lines for the extra authors.'
+  paragraph_run:
+    italic: true
+  run:
+    italic: true
+  runs:
+  - index: 1
+    run:
+      italic: true
+    textSample: Delete the author and affiliation lines for the
+  - index: 2
+    run:
+      italic: true
+    textSample: extra authors.
+- index: 57
+  style: Normal
+  paragraph:
+    alignment: start
+  paragraph_run:
+    italic: true
+- index: 63
+  style: Heading4
+  textSample: 'Positioning Figures and Tables: Place figures and tables at the top
+    and bottom of columns. Avoid placing them in the mid'
+  run:
+    italic: true
+  runs:
+  - index: 2
+    run:
+      italic: true
+    textSample: Place figures and tables at the top and bottom of columns. Avoid placing
+      them in
+- index: 65
+  style: tablefootnote
+  textSample: Sample of a Table footnote. (Table footnote)
+  run:
+    italic: true
+  runs:
+  - index: 8
+    run:
+      italic: true
+    textSample: Table footnote
+- index: 66
+  style: figurecaption
+  textSample: Example of a figure caption. (figure caption)
+  run:
+    italic: true
+  runs:
+  - index: 4
+    run:
+      italic: true
+    textSample: figure caption
+- index: 68
+  style: Heading5
+  textSample: Acknowledgment (Heading 5)
+  run:
+    italic: true
+    smallCaps: true
+  runs:
+  - index: 2
+    run:
+      italic: true
+    textSample: (
+  - index: 3
+    run:
+      italic: true
+      smallCaps: true
+    textSample: Heading 5
+  - index: 4
+    run:
+      italic: true
+    textSample: )
+- index: 75
+  style: references
+  textSample: G. Eason, B. Noble, and I. N. Sneddon, “On certain integrals of Lipschitz-Hankel
+    type involving products of Bessel funct
+  paragraph:
+    indent_hanging: 17.70pt
+  run:
+    italic: true
+  runs:
+  - index: 1
+    run:
+      italic: true
+    textSample: (references)
+- index: 76
+  style: references
+  textSample: 'J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed.,
+    vol. 2. Oxford: Clarendon, 1892, pp.68–73.'
+  paragraph:
+    indent_hanging: 17.70pt
+- index: 77
+  style: references
+  textSample: I. S. Jacobs and C. P. Bean, “Fine particles, thin films and exchange
+    anisotropy,” in Magnetism, vol. III, G. T. Rado an
+  paragraph:
+    indent_hanging: 17.70pt
+- index: 78
+  style: references
+  textSample: K. Elissa, “Title of paper if known,” unpublished.
+  paragraph:
+    indent_hanging: 17.70pt
+- index: 79
+  style: references
+  textSample: R. Nicole, “Title of paper with only first word capitalized,” J. Name
+    Stand. Abbrev., in press.
+  paragraph:
+    indent_hanging: 17.70pt
+- index: 80
+  style: references
+  textSample: Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, “Electron spectroscopy
+    studies on magneto-optical media and plastic substra
+  paragraph:
+    indent_hanging: 17.70pt
+- index: 81
+  style: references
+  textSample: 'M. Young, The Technical Writer’s Handbook. Mill Valley, CA: University
+    Science, 1989.'
+  paragraph:
+    indent_hanging: 17.70pt
+- index: 82
+  style: references
+  paragraph:
+    indent_hanging: 18pt
+- index: 83
+  style: references
+  textSample: IEEE conference templates contain guidance text for composing and formatting
+    conference papers. Please ensure that all t
+  paragraph:
+    spacing_line: 12pt
+    spacing_lineRule: auto
+    indent_hanging: 18pt
+    alignment: center
+  paragraph_run:
+    fontEastAsia: SimSun
+    fontSize: 20
+    fontSizeCs: 20
+    fontColor: FF0000
+    bold: true
+    fontSpacing: -1
+  run:
+    bold: true
+    fontColor: FF0000
+    fontEastAsia: SimSun
+    fontSize: 20
+    fontSizeCs: 20
+    fontSpacing: -1
+  runs:
+  - index: 0
+    run:
+      fontEastAsia: SimSun
+      fontSize: 20
+      fontSizeCs: 20
+      fontColor: FF0000
+      bold: true
+      fontSpacing: -1
+    textSample: IEEE conference templates contain guidance text for composing and
+      formatting con
+  - index: 1
+    run:
+      fontEastAsia: SimSun
+      fontSize: 20
+      fontSizeCs: 20
+      fontColor: FF0000
+      bold: true
+      fontSpacing: -1
+    textSample: may
+  - index: 2
+    run:
+      fontEastAsia: SimSun
+      fontSize: 20
+      fontSizeCs: 20
+      fontColor: FF0000
+      bold: true
+      fontSpacing: -1
+    textSample: result in your paper not being published.
+semantic_format_rules:
+- role: paper_title
+  match:
+    type: front_index
+    index: 0
+  paragraph:
+    alignment: center
+    spacing_before: 5pt
+    spacing_after: 5pt
+  run:
+    font: Times New Roman
+    fontSize: 48
+    fontSizeCs: 48
+    bold: true
+- role: author_name
+  match:
+    type: front_index
+    index: 1
+  paragraph:
+    alignment: center
+    spacing_before: 5pt
+    spacing_after: 2pt
+  run:
+    fontSize: 18
+    fontSizeCs: 18
+- role: author_affiliation
+  match:
+    type: front_index
+    index: 2
+  paragraph:
+    alignment: center
+  run:
+    fontSize: 16
+    fontSizeCs: 16
+    italic: true
+- role: author_email
+  match:
+    type: front_index
+    index: 3
+  paragraph:
+    alignment: center
+  run:
+    fontSize: 16
+    fontSizeCs: 16
+- role: author_name
+  match:
+    type: front_index
+    index: 4
+  paragraph:
+    alignment: center
+    spacing_before: 5pt
+    spacing_after: 2pt
+  run:
+    fontSize: 18
+    fontSizeCs: 18
+- role: author_affiliation
+  match:
+    type: front_index
+    index: 5
+  paragraph:
+    alignment: center
+  run:
+    fontSize: 16
+    fontSizeCs: 16
+    italic: true
+- role: author_email
+  match:
+    type: front_index
+    index: 6
+  paragraph:
+    alignment: center
+  run:
+    fontSize: 16
+    fontSizeCs: 16
+- role: abstract
+  match:
+    type: regex
+    pattern: "^Abstract[\\s—–-]"
+  paragraph:
+    alignment: both
+  run:
+    fontSize: 18
+    fontSizeCs: 18
+    italic: true
+  prefixes:
+  - text: "Abstract—"
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      bold: true
+  - text: "Abstract–"
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      bold: true
+  - text: "Abstract:"
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      bold: true
+- role: keywords
+  match:
+    type: regex
+    pattern: "^Keywords[\\s—–-]"
+  paragraph:
+    alignment: both
+  run:
+    fontSize: 18
+    fontSizeCs: 18
+    italic: true
+  prefixes:
+  - text: "Keywords—"
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      bold: true
+  - text: "Keywords–"
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      bold: true
+  - text: "Keywords:"
+    run:
+      fontSize: 18
+      fontSizeCs: 18
+      bold: true
+- role: section_heading
+  match:
+    type: regex
+    pattern: "^(I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII|XIII|XIV|XV)\\.\\s"
+  paragraph:
+    alignment: left
+    spacing_before: 8pt
+    spacing_after: 4pt
+    keepNext: true
+  run:
+    italic: true
+    smallCaps: true
+    fontSize: 24
+    fontSizeCs: 24
+- role: subsection_heading
+  match:
+    type: regex
+    pattern: "^[A-Z]\\.\\s+[A-Z]"
+  paragraph:
+    alignment: left
+    spacing_before: 6pt
+    spacing_after: 3pt
+    keepNext: true
+  run:
+    italic: true
+    fontSize: 21
+    fontSizeCs: 21
+- role: acknowledgement_heading
+  match:
+    type: regex
+    pattern: "^ACKNOWLEDGMENT"
+  paragraph:
+    alignment: left
+    spacing_before: 8pt
+    spacing_after: 4pt
+  run:
+    italic: true
+    smallCaps: true
+    fontSize: 21
+    fontSizeCs: 21
+  sets_context:
+    after_acknowledgments: true
+- role: references_heading
+  match:
+    type: regex
+    pattern: "^REFERENCES"
+  paragraph:
+    alignment: left
+    spacing_before: 8pt
+    spacing_after: 4pt
+  run:
+    italic: true
+    smallCaps: true
+    fontSize: 21
+    fontSizeCs: 21
+  sets_context:
+    after_references: true
+- role: reference_entry
+  match:
+    type: after_references
+  paragraph:
+    alignment: both
+    spacing_after: 2.50pt
+    spacing_line: 9pt
+    spacing_lineRule: exact
+    indent_hanging: 17.70pt
+  run:
+    fontSize: 16
+    fontSizeCs: 16
+    italic: true
+- role: body
+  match:
+    type: default
+  paragraph:
+    alignment: both
+    indent_firstLine: 14.40pt
+    spacing_after: 6pt
+    spacing_line: 11.40pt
+    spacing_lineRule: auto
+  run:
+    font: Times New Roman
+    fontSize: 21
+    fontSizeCs: 21
+numbering:
+- id: 1
+  abstractNumId: 14
+  levels:
+  - level: 0
+    start: 1
+    format: bullet
+    text: 
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Symbol
+    font_hAnsi: Symbol
+  - level: 1
+    start: 1
+    format: bullet
+    text: o
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Courier New
+    font_hAnsi: Courier New
+  - level: 2
+    start: 1
+    format: bullet
+    text: 
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Wingdings
+    font_hAnsi: Wingdings
+  - level: 3
+    start: 1
+    format: bullet
+    text: 
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Symbol
+    font_hAnsi: Symbol
+  - level: 4
+    start: 1
+    format: bullet
+    text: o
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Courier New
+    font_hAnsi: Courier New
+  - level: 5
+    start: 1
+    format: bullet
+    text: 
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Wingdings
+    font_hAnsi: Wingdings
+  - level: 6
+    start: 1
+    format: bullet
+    text: 
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Symbol
+    font_hAnsi: Symbol
+  - level: 7
+    start: 1
+    format: bullet
+    text: o
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Courier New
+    font_hAnsi: Courier New
+  - level: 8
+    start: 1
+    format: bullet
+    text: 
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Wingdings
+    font_hAnsi: Wingdings
+- id: 2
+  abstractNumId: 19
+  levels:
+  - level: 0
+    start: 1
+    format: decimal
+    text: Fig. %1.
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Times New Roman
+    font_hAnsi: Times New Roman
+    font_cs: Times New Roman
+    fontSize: 16
+  - level: 1
+    start: 1
+    format: lowerLetter
+    text: '%2.'
+    alignment: start
+    indent_hanging: 18pt
+    font_cs: Times New Roman
+  - level: 2
+    start: 1
+    format: lowerRoman
+    text: '%3.'
+    alignment: end
+    indent_hanging: 9pt
+    font_cs: Times New Roman
+  - level: 3
+    start: 1
+    format: decimal
+    text: '%4.'
+    alignment: start
+    indent_hanging: 18pt
+    font_cs: Times New Roman
+  - level: 4
+    start: 1
+    format: lowerLetter
+    text: '%5.'
+    alignment: start
+    indent_hanging: 18pt
+    font_cs: Times New Roman
+  - level: 5
+    start: 1
+    format: lowerRoman
+    text: '%6.'
+    alignment: end
+    indent_hanging: 9pt
+    font_cs: Times New Roman
+  - level: 6
+    start: 1
+    format: decimal
+    text: '%7.'
+    alignment: start
+    indent_hanging: 18pt
+    font_cs: Times New Roman
+  - level: 7
+    start: 1
+    format: lowerLetter
+    text: '%8.'
+    alignment: start
+    indent_hanging: 18pt
+    font_cs: Times New Roman
+  - level: 8
+    start: 1
+    format: lowerRoman
+    text: '%9.'
+    alignment: end
+    indent_hanging: 9pt
+    font_cs: Times New Roman
+- id: 3
+  abstractNumId: 13
+  levels:
+  - level: 0
+    start: 1
+    format: decimal
+    text: '%1 '
+    alignment: start
+    indent_firstLine: 14.40pt
+    font_ascii: Times New Roman
+    font_hAnsi: Times New Roman
+    font_cs: Times New Roman
+    fontSize: 16
+  - level: 1
+    start: 1
+    format: lowerLetter
+    text: '%2.'
+    alignment: start
+    indent_hanging: 18pt
+    font_cs: Times New Roman
+  - level: 2
+    start: 1
+    format: lowerRoman
+    text: '%3.'
+    alignment: end
+    indent_hanging: 9pt
+    font_cs: Times New Roman
+  - level: 3
+    start: 1
+    format: decimal
+    text: '%4.'
+    alignment: start
+    indent_hanging: 18pt
+    font_cs: Times New Roman
+  - level: 4
+    start: 1
+    format: lowerLetter
+    text: '%5.'
+    alignment: start
+    indent_hanging: 18pt
+    font_cs: Times New Roman
+  - level: 5
+    start: 1
+    format: lowerRoman
+    text: '%6.'
+    alignment: end
+    indent_hanging: 9pt
+    font_cs: Times New Roman
+  - level: 6
+    start: 1
+    format: decimal
+    text: '%7.'
+    alignment: start
+    indent_hanging: 18pt
+    font_cs: Times New Roman
+  - level: 7
+    start: 1
+    format: lowerLetter
+    text: '%8.'
+    alignment: start
+    indent_hanging: 18pt
+    font_cs: Times New Roman
+  - level: 8
+    start: 1
+    format: lowerRoman
+    text: '%9.'
+    alignment: end
+    indent_hanging: 9pt
+    font_cs: Times New Roman
+- id: 4
+  abstractNumId: 16
+  levels: &id001
+  - level: 0
+    start: 1
+    format: upperRoman
+    text: '%1.'
+    alignment: center
+    indent_firstLine: 10.80pt
+    font_ascii: Times New Roman
+    font_hAnsi: Times New Roman
+    font_cs: Times New Roman
+    fontSize: 20
+  - level: 1
+    start: 1
+    format: upperLetter
+    text: '%2.'
+    alignment: start
+    indent_hanging: 14.40pt
+    font_ascii: Times New Roman
+    font_hAnsi: Times New Roman
+    font_cs: Times New Roman
+    fontSize: 20
+  - level: 2
+    start: 1
+    format: decimal
+    text: '%3)'
+    alignment: start
+    indent_firstLine: 9pt
+    font_ascii: Times New Roman
+    font_hAnsi: Times New Roman
+    font_cs: Times New Roman
+    fontSize: 20
+  - level: 3
+    start: 1
+    format: lowerLetter
+    text: '%4)'
+    alignment: start
+    indent_firstLine: 18pt
+    font_ascii: Times New Roman
+    font_hAnsi: Times New Roman
+    font_cs: Times New Roman
+    fontSize: 20
+  - level: 4
+    start: 1
+    format: none
+    text: null
+    alignment: start
+    font_cs: Times New Roman
+  - level: 5
+    start: 1
+    format: lowerLetter
+    text: (%6)
+    alignment: start
+    font_cs: Times New Roman
+  - level: 6
+    start: 1
+    format: lowerRoman
+    text: (%7)
+    alignment: start
+    font_cs: Times New Roman
+  - level: 7
+    start: 1
+    format: lowerLetter
+    text: (%8)
+    alignment: start
+    font_cs: Times New Roman
+  - level: 8
+    start: 1
+    format: lowerRoman
+    text: (%9)
+    alignment: start
+    font_cs: Times New Roman
+- id: 5
+  abstractNumId: 16
+  levels: *id001
+- id: 6
+  abstractNumId: 16
+  levels: *id001
+- id: 7
+  abstractNumId: 16
+  levels: *id001
+- id: 8
+  abstractNumId: 18
+  levels:
+  - level: 0
+    start: 1
+    format: decimal
+    text: '[%1]'
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Times New Roman
+    font_hAnsi: Times New Roman
+    font_cs: Times New Roman
+    fontSize: 16
+- id: 9
+  abstractNumId: 20
+  levels:
+  - level: 0
+    start: 1
+    format: upperRoman
+    text: 'TABLE %1. '
+    alignment: start
+    font_ascii: Times New Roman
+    font_hAnsi: Times New Roman
+    font_cs: Times New Roman
+    fontSize: 16
+- id: 10
+  abstractNumId: 15
+  levels:
+  - level: 0
+    start: 14
+    format: decimal
+    text: '%1'
+    alignment: start
+    indent_hanging: 18pt
+    font_cs: Times New Roman
+- id: 11
+  abstractNumId: 12
+  levels:
+  - level: 0
+    start: 1
+    format: lowerLetter
+    text: '%1.'
+    alignment: start
+    indent_hanging: 18pt
+    font_cs: Times New Roman
+  - level: 1
+    start: 1
+    format: lowerLetter
+    text: '%2.'
+    alignment: start
+    indent_hanging: 18pt
+    font_cs: Times New Roman
+  - level: 2
+    start: 1
+    format: lowerRoman
+    text: '%3.'
+    alignment: end
+    indent_hanging: 9pt
+    font_cs: Times New Roman
+  - level: 3
+    start: 1
+    format: decimal
+    text: '%4.'
+    alignment: start
+    indent_hanging: 18pt
+    font_cs: Times New Roman
+  - level: 4
+    start: 1
+    format: lowerLetter
+    text: '%5.'
+    alignment: start
+    indent_hanging: 18pt
+    font_cs: Times New Roman
+  - level: 5
+    start: 1
+    format: lowerRoman
+    text: '%6.'
+    alignment: end
+    indent_hanging: 9pt
+    font_cs: Times New Roman
+  - level: 6
+    start: 1
+    format: decimal
+    text: '%7.'
+    alignment: start
+    indent_hanging: 18pt
+    font_cs: Times New Roman
+  - level: 7
+    start: 1
+    format: lowerLetter
+    text: '%8.'
+    alignment: start
+    indent_hanging: 18pt
+    font_cs: Times New Roman
+  - level: 8
+    start: 1
+    format: lowerRoman
+    text: '%9.'
+    alignment: end
+    indent_hanging: 9pt
+    font_cs: Times New Roman
+- id: 12
+  abstractNumId: 11
+  levels:
+  - level: 0
+    start: 1
+    format: upperRoman
+    text: '%1.'
+    alignment: end
+    indent_hanging: 18pt
+  - level: 1
+    start: 1
+    format: lowerLetter
+    text: '%2.'
+    alignment: start
+    indent_hanging: 18pt
+  - level: 2
+    start: 1
+    format: lowerRoman
+    text: '%3.'
+    alignment: end
+    indent_hanging: 9pt
+  - level: 3
+    start: 1
+    format: decimal
+    text: '%4.'
+    alignment: start
+    indent_hanging: 18pt
+  - level: 4
+    start: 1
+    format: lowerLetter
+    text: '%5.'
+    alignment: start
+    indent_hanging: 18pt
+  - level: 5
+    start: 1
+    format: lowerRoman
+    text: '%6.'
+    alignment: end
+    indent_hanging: 9pt
+  - level: 6
+    start: 1
+    format: decimal
+    text: '%7.'
+    alignment: start
+    indent_hanging: 18pt
+  - level: 7
+    start: 1
+    format: lowerLetter
+    text: '%8.'
+    alignment: start
+    indent_hanging: 18pt
+  - level: 8
+    start: 1
+    format: lowerRoman
+    text: '%9.'
+    alignment: end
+    indent_hanging: 9pt
+- id: 13
+  abstractNumId: 0
+  levels:
+  - level: 0
+    start: 1
+    format: bullet
+    text: null
+    alignment: start
+    indent_firstLine: 0pt
+    font_ascii: Symbol
+    font_hAnsi: Symbol
+  - level: 1
+    start: 1
+    format: bullet
+    text: 
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Symbol
+    font_hAnsi: Symbol
+  - level: 2
+    start: 1
+    format: bullet
+    text: o
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Courier New
+    font_hAnsi: Courier New
+    font_cs: Courier New
+  - level: 3
+    start: 1
+    format: bullet
+    text: 
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Wingdings
+    font_hAnsi: Wingdings
+  - level: 4
+    start: 1
+    format: bullet
+    text: 
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Wingdings
+    font_hAnsi: Wingdings
+  - level: 5
+    start: 1
+    format: bullet
+    text: 
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Symbol
+    font_hAnsi: Symbol
+  - level: 6
+    start: 1
+    format: bullet
+    text: o
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Courier New
+    font_hAnsi: Courier New
+    font_cs: Courier New
+  - level: 7
+    start: 1
+    format: bullet
+    text: 
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Wingdings
+    font_hAnsi: Wingdings
+  - level: 8
+    start: 1
+    format: bullet
+    text: 
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Wingdings
+    font_hAnsi: Wingdings
+- id: 14
+  abstractNumId: 10
+  levels:
+  - level: 0
+    start: 1
+    format: bullet
+    text: 
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Symbol
+    font_hAnsi: Symbol
+- id: 15
+  abstractNumId: 8
+  levels:
+  - level: 0
+    start: 1
+    format: bullet
+    text: 
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Symbol
+    font_hAnsi: Symbol
+- id: 16
+  abstractNumId: 7
+  levels:
+  - level: 0
+    start: 1
+    format: bullet
+    text: 
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Symbol
+    font_hAnsi: Symbol
+- id: 17
+  abstractNumId: 6
+  levels:
+  - level: 0
+    start: 1
+    format: bullet
+    text: 
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Symbol
+    font_hAnsi: Symbol
+- id: 18
+  abstractNumId: 5
+  levels:
+  - level: 0
+    start: 1
+    format: bullet
+    text: 
+    alignment: start
+    indent_hanging: 18pt
+    font_ascii: Symbol
+    font_hAnsi: Symbol
+- id: 19
+  abstractNumId: 9
+  levels:
+  - level: 0
+    start: 1
+    format: decimal
+    text: '%1.'
+    alignment: start
+    indent_hanging: 18pt
+- id: 20
+  abstractNumId: 4
+  levels:
+  - level: 0
+    start: 1
+    format: decimal
+    text: '%1.'
+    alignment: start
+    indent_hanging: 18pt
+- id: 21
+  abstractNumId: 3
+  levels:
+  - level: 0
+    start: 1
+    format: decimal
+    text: '%1.'
+    alignment: start
+    indent_hanging: 18pt
+- id: 22
+  abstractNumId: 2
+  levels:
+  - level: 0
+    start: 1
+    format: decimal
+    text: '%1.'
+    alignment: start
+    indent_hanging: 18pt
+- id: 23
+  abstractNumId: 1
+  levels:
+  - level: 0
+    start: 1
+    format: decimal
+    text: '%1.'
+    alignment: start
+    indent_hanging: 18pt
+- id: 24
+  abstractNumId: 17
+  levels:
+  - level: 0
+    start: 1
+    format: lowerLetter
+    text: '%1.'
+    alignment: end
+    indent_hanging: 18pt
+    font_ascii: Times New Roman
+    font_hAnsi: Times New Roman
+    fontSize: 16
+  - level: 1
+    start: 1
+    format: lowerLetter
+    text: '%2.'
+    alignment: start
+    indent_hanging: 18pt
+  - level: 2
+    start: 1
+    format: lowerRoman
+    text: '%3.'
+    alignment: end
+    indent_hanging: 9pt
+  - level: 3
+    start: 1
+    format: decimal
+    text: '%4.'
+    alignment: start
+    indent_hanging: 18pt
+  - level: 4
+    start: 1
+    format: lowerLetter
+    text: '%5.'
+    alignment: start
+    indent_hanging: 18pt
+  - level: 5
+    start: 1
+    format: lowerRoman
+    text: '%6.'
+    alignment: end
+    indent_hanging: 9pt
+  - level: 6
+    start: 1
+    format: decimal
+    text: '%7.'
+    alignment: start
+    indent_hanging: 18pt
+  - level: 7
+    start: 1
+    format: lowerLetter
+    text: '%8.'
+    alignment: start
+    indent_hanging: 18pt
+  - level: 8
+    start: 1
+    format: lowerRoman
+    text: '%9.'
+    alignment: end
+    indent_hanging: 9pt
+theme:
+  schemeName: Office
+  colors:
+    a:dk1: '000000'
+    a:lt1: FFFFFF
+    a:dk2: 44546A
+    a:lt2: E7E6E6
+    a:accent1: 5B9BD5
+    a:accent2: ED7D31
+    a:accent3: A5A5A5
+    a:accent4: FFC000
+    a:accent5: 4472C4
+    a:accent6: 70AD47
+    a:hlink: 0563C1
+    a:folHlink: 954F72
+  fontSchemeName: Office
+  fonts:
+    major: Calibri Light
+    minor: Calibri
+fonts:
+- Symbol
+- Times New Roman
+- Courier New
+- Wingdings
+- SimSun
+- MS Mincho
+- Calibri Light
+- Calibri

@@ -1,0 +1,16 @@
+scheme:
+  name: "Default Academic"
+  description: "Clean, modern academic figure style"
+  defaults:
+    dpi: 150
+    format: "png"
+    width: 800
+    height: 500
+    color_palette: ["#2196F3", "#FF9800", "#4CAF50", "#F44336", "#9C27B0"]
+    font_family: "DejaVu Sans"
+    font_size: 10
+    title_font_size: 12
+    line_width: 1.5
+    grid: true
+    grid_alpha: 0.3
+    legend_position: "best"

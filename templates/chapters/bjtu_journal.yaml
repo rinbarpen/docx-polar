@@ -1,0 +1,124 @@
+# 北京交通大学学报 — Chapter Template
+venue:
+  name: "北京交通大学学报"
+  language: "zh-CN"
+  citation_format: "numbered"
+  page: { width: 11906, height: 16838, margins: { top: 1440, bottom: 1440, left: 1440, right: 1440 } }
+  style:
+    default_font: "Times New Roman"
+    default_font_size: 24
+    template_category: "北交模板"
+
+chapters:
+  - id: "introduction"
+    heading: "引言"
+    level: 1
+    word_count_min: 500
+    word_count_max: 1500
+    min_figures: 0
+    min_tables: 0
+    requirements_text: |
+      - Use formal academic Chinese
+      - Include research background and significance
+      - State the research problem
+      - List contributions at the end
+    topics:
+      - "研究背景与意义"
+      - "现有方法的不足"
+      - "本文的主要贡献"
+
+  - id: "related_work"
+    heading: "相关工作"
+    level: 1
+    word_count_min: 400
+    word_count_max: 1200
+    min_figures: 0
+    min_tables: 1
+    requirements_text: |
+      - Organize by research direction
+      - Compare existing methods
+      - Identify gaps this paper fills
+      - Include a comparison table if applicable
+    topics:
+      - "相关研究方向1"
+      - "相关研究方向2"
+      - "现有方法的局限性总结"
+
+  - id: "method"
+    heading: "本文方法"
+    level: 1
+    word_count_min: 1500
+    word_count_max: 3000
+    min_figures: 2
+    min_tables: 0
+    requirements_text: |
+      - Describe each component in detail
+      - Use mathematical formulas with LaTeX notation
+      - Include an architecture diagram
+      - Explain design rationale
+    topics:
+      - "方法总体框架"
+      - "关键模块详细设计"
+      - "理论分析与讨论"
+
+  - id: "experiments"
+    heading: "实验与分析"
+    level: 1
+    word_count_min: 1000
+    word_count_max: 2500
+    min_figures: 1
+    min_tables: 2
+    requirements_text: |
+      - Describe datasets and evaluation metrics
+      - Present main results in tables
+      - Include ablation studies
+      - Provide qualitative analysis with figures
+      - Use omni-draw for charts (scheme: bjtu_journal)
+      - Use omni-sheet for tables (scheme: bjtu_journal)
+    topics:
+      - "实验设置（数据集、评价指标、实现细节）"
+      - "主要实验结果"
+      - "消融实验"
+      - "定性分析"
+
+  - id: "conclusion"
+    heading: "结论"
+    level: 1
+    word_count_min: 300
+    word_count_max: 800
+    min_figures: 0
+    min_tables: 0
+    requirements_text: |
+      - Summarize main contributions
+      - Discuss limitations honestly
+      - Suggest future work directions
+    topics:
+      - "研究工作总结"
+      - "局限性与未来工作"
+
+front_matter:
+  - element: "cn_title"
+    max_length: 30
+    example: "基于XXX的YYY方法"
+  - element: "cn_authors"
+    example: "张三，李四"
+  - element: "cn_affiliation"
+    example: "（北京交通大学 计算机与信息技术学院，北京 100044）"
+  - element: "cn_abstract"
+    word_count: [150, 300]
+  - element: "cn_keywords"
+    count: [3, 8]
+  - element: "classification"
+    example: "TP391"
+  - element: "en_title"
+  - element: "en_authors"
+  - element: "en_affiliation"
+  - element: "en_abstract"
+    word_count: [150, 300]
+  - element: "en_keywords"
+    count: [3, 8]
+
+back_matter:
+  - element: "references"
+    min_count: 15
+    format: "numbered"

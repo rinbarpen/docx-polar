@@ -13,6 +13,10 @@ Thumbs.db
 # Lock files
 .~lock.*#
 
+# Agent config directories
+.claude/
+.codex/
+
 # Environment
 .env
 .venv

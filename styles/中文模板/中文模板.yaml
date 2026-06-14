@@ -1,0 +1,6751 @@
+document_defaults:
+  run:
+    font: Liberation Serif
+    fontEastAsia: Noto Serif CJK SC
+    fontSize: 24
+    fontSizeCs: 24
+  paragraph: {}
+paragraph_styles:
+- id: Normal
+  name: null
+  run:
+    font: Times New Roman
+    fontEastAsia: 宋体;SimSun
+    fontSize: 15
+    fontSizeCs: 15
+    fontColor: auto
+  paragraph:
+    alignment: left
+    widowControl: true
+    indent_hanging: 546
+    indent_left: 546
+    spacing_line: 280
+    spacing_lineRule: atLeast
+- id: Heading1
+  name: null
+  basedOn: Normal
+  next: TextBody
+  run:
+    fontEastAsia: 黑体;SimHei
+    fontSize: 28
+    fontSizeCs: 28
+  paragraph:
+    spacing_before: 160
+    spacing_after: 160
+    alignment: left
+    outlineLevel: 0
+    keepNext: true
+- id: Heading2
+  name: null
+  basedOn: Normal
+  next: TextBody
+  run:
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  paragraph:
+    spacing_before: 78
+    spacing_after: 78
+    alignment: left
+    outlineLevel: 1
+    keepNext: true
+    indent_hanging: 0
+    indent_left: 0
+- id: Heading3
+  name: null
+  basedOn: Normal
+  next: TextBody
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+    fontColor: FF0000
+  paragraph:
+    alignment: left
+    outlineLevel: 2
+    keepNext: true
+- id: Heading4
+  name: null
+  basedOn: Normal
+  next: Normal
+  run:
+    font: Arial
+    fontEastAsia: 黑体;SimHei
+  paragraph:
+    alignment: left
+    outlineLevel: 3
+    keepNext: true
+- id: Heading5
+  name: null
+  basedOn: Normal
+  next: Normal
+  run:
+    fontSize: 28
+    bold: true
+  paragraph:
+    spacing_before: 280
+    spacing_after: 290
+    spacing_line: 374
+    spacing_lineRule: auto
+    outlineLevel: 4
+    keepNext: true
+- id: Heading6
+  name: null
+  basedOn: Normal
+  next: Normal
+  run: {}
+  paragraph:
+    spacing_before: 240
+    spacing_after: 64
+    alignment: left
+    outlineLevel: 5
+    keepNext: true
+- id: Heading7
+  name: null
+  basedOn: Normal
+  next: Normal
+  run:
+    fontSize: 24
+    bold: true
+  paragraph:
+    spacing_before: 240
+    spacing_after: 64
+    spacing_line: 319
+    spacing_lineRule: auto
+    outlineLevel: 6
+    keepNext: true
+- id: Heading8
+  name: null
+  basedOn: Normal
+  next: Normal
+  run:
+    font: Arial
+    fontEastAsia: 黑体;SimHei
+    fontSize: 24
+  paragraph:
+    spacing_before: 240
+    spacing_after: 64
+    spacing_line: 319
+    spacing_lineRule: auto
+    outlineLevel: 7
+    keepNext: true
+- id: Heading9
+  name: null
+  basedOn: Normal
+  next: Normal
+  run:
+    font: Arial
+    fontEastAsia: 黑体;SimHei
+  paragraph:
+    spacing_before: 240
+    spacing_after: 64
+    spacing_line: 319
+    spacing_lineRule: auto
+    outlineLevel: 8
+    keepNext: true
+- id: Heading
+  name: null
+  basedOn: Normal
+  next: TextBody
+  run:
+    font: DejaVu Sans;Arial
+    fontEastAsia: DejaVu Sans;Arial
+    fontSize: 28
+    fontSizeCs: 28
+  paragraph:
+    spacing_before: 240
+    spacing_after: 120
+    keepNext: true
+- id: TextBody
+  name: null
+  basedOn: Normal
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  paragraph:
+    indent_firstLine: 420
+- id: List
+  name: null
+  basedOn: TextBody
+  run: {}
+  paragraph: {}
+- id: Caption
+  name: null
+  basedOn: Normal
+  run:
+    fontSize: 24
+    fontSizeCs: 24
+    italic: true
+  paragraph:
+    spacing_before: 120
+    spacing_after: 120
+- id: Index
+  name: null
+  basedOn: Normal
+  run: {}
+  paragraph: {}
+- id: Style9
+  name: null
+  basedOn: Normal
+  next: Normal
+  run:
+    font: Arial
+    fontEastAsia: 黑体;SimHei
+  paragraph:
+    spacing_before: 152
+    spacing_after: 160
+- id: Style10
+  name: null
+  basedOn: Normal
+  run: {}
+  paragraph: {}
+- id: Style11
+  name: null
+  basedOn: Normal
+  next: TextBody
+  run:
+    font: DejaVu Sans;Arial
+    fontEastAsia: DejaVu Sans;Arial
+    fontSize: 28
+    fontSizeCs: 28
+  paragraph:
+    spacing_before: 240
+    spacing_after: 120
+    keepNext: true
+- id: Subtitle
+  name: null
+  basedOn: Normal
+  next: Style13
+  run:
+    fontEastAsia: 黑体;SimHei
+    fontSize: 44
+    fontSizeCs: 44
+  paragraph:
+    spacing_before: 624
+    spacing_after: 0
+    outlineLevel: 0
+    alignment: center
+    indent_firstLine: 879
+- id: HeaderandFooter
+  name: null
+  basedOn: Normal
+  run: {}
+  paragraph: {}
+- id: Footer
+  name: null
+  basedOn: Normal
+  run:
+    fontEastAsia: ·s²Ó©úÅé;Malgun Gothic Semilight
+  paragraph:
+    spacing_line: 240
+    spacing_lineRule: atLeast
+    alignment: left
+- id: Header
+  name: null
+  basedOn: Normal
+  run: {}
+  paragraph:
+    alignment: center
+- id: Style12
+  name: null
+  run:
+    font: Times New Roman
+    fontEastAsia: 宋体;SimSun
+    fontSize: 15
+    fontSizeCs: 15
+    fontColor: auto
+  paragraph:
+    indent_left: 105
+    indent_hanging: 105
+    alignment: center
+    widowControl: true
+- id: Style13
+  name: null
+  basedOn: Normal
+  next: Style12
+  run:
+    fontEastAsia: 仿宋_GB2312;仿宋
+    fontSize: 32
+    fontSizeCs: 32
+  paragraph:
+    spacing_before: 312
+    spacing_after: 312
+    spacing_line: 280
+    spacing_lineRule: atLeast
+    alignment: center
+- id: Name
+  name: null
+  basedOn: Style13
+  next: DepartCorrespond
+  run:
+    fontEastAsia: 宋体;SimSun
+    fontSize: 21
+    fontSizeCs: 21
+  paragraph:
+    spacing_before: 220
+    spacing_after: 180
+    keepNext: true
+    alignment: center
+- id: '1'
+  name: null
+  basedOn: Normal
+  next: Name
+  run:
+    fontEastAsia: 黑体;SimHei
+    fontSize: 24
+    fontSizeCs: 20
+    bold: true
+  paragraph:
+    spacing_before: 240
+    spacing_after: 100
+    keepNext: true
+- id: DepartCorrespondhttp
+  name: null
+  basedOn: Style12
+  run:
+    fontSize: 16
+  paragraph:
+    indent_left: 66
+    indent_right: 0
+    indent_hanging: 66
+- id: Style14
+  name: null
+  basedOn: TextBody
+  run: {}
+  paragraph: {}
+- id: Style15
+  name: null
+  basedOn: Normal
+  run:
+    fontEastAsia: 楷体_GB2312;楷体
+    fontSize: 21
+    fontSizeCs: 21
+  paragraph:
+    alignment: center
+- id: Footnote
+  name: null
+  basedOn: Normal
+  next: '11'
+  run:
+    fontSize: 15
+  paragraph:
+    spacing_before: 120
+    spacing_after: 0
+    spacing_line: 312
+    spacing_lineRule: auto
+    indent_firstLine: 267
+- id: '11'
+  name: null
+  basedOn: Footnote
+  run: {}
+  paragraph:
+    spacing_before: 0
+    spacing_after: 0
+    indent_firstLine: 297
+- id: Style16
+  name: null
+  basedOn: Normal
+  run: {}
+  paragraph:
+    shading:
+      val: clear
+      fill: 000080
+- id: Abstract
+  name: null
+  next: Keywords
+  run:
+    font: Times New Roman
+    fontEastAsia: 宋体;SimSun
+    fontSize: 21
+    fontSizeCs: 21
+    fontColor: auto
+  paragraph:
+    alignment: both
+    widowControl: true
+- id: DepartCorrespond
+  name: null
+  basedOn: Style12
+  run:
+    fontSize: 15
+    fontSizeCs: 15
+  paragraph:
+    indent_left: 99
+    indent_hanging: 99
+    alignment: center
+- id: Date1
+  name: null
+  basedOn: DepartCorrespond
+  next: Normal
+  run:
+    fontSize: 18
+  paragraph:
+    spacing_before: 0
+    spacing_after: 240
+- id: Keywords
+  name: null
+  basedOn: Normal
+  next: Style18
+  run:
+    fontEastAsia: 宋体;SimSun
+    fontSize: 21
+    fontSizeCs: 21
+  paragraph:
+    spacing_before: 0
+    spacing_after: 0
+    indent_left: 1332
+    indent_hanging: 1332
+- id: Title1
+  name: null
+  basedOn: Normal
+  next: Name
+  run:
+    fontEastAsia: 黑体;SimHei
+    fontSize: 28
+    bold: true
+    fontSizeCs: 28
+  paragraph:
+    spacing_before: 240
+    spacing_after: 100
+    outlineLevel: 0
+    keepNext: true
+    alignment: center
+- id: Style17
+  name: null
+  basedOn: Date1
+  next: TextBody
+  run:
+    fontEastAsia: 宋体;SimSun
+    font: 宋体;SimSun
+  paragraph:
+    spacing_before: 0
+    spacing_after: 320
+    indent_left: 0
+    indent_hanging: 0
+- id: Style18
+  name: null
+  basedOn: TextBody
+  next: Style19
+  run:
+    fontEastAsia: 宋体;SimSun
+    fontSizeCs: 18
+  paragraph:
+    indent_hanging: 0
+- id: Style19
+  name: null
+  basedOn: Style18
+  next: Style17
+  run:
+    fontEastAsia: 宋体;SimSun
+    fontSizeCs: 18
+  paragraph:
+    indent_left: 772
+    indent_hanging: 772
+- id: '12'
+  name: null
+  basedOn: Heading2
+  run:
+    fontSize: 18
+    bold: true
+  paragraph: {}
+- id: Correspond
+  name: null
+  basedOn: DepartCorrespond
+  next: Normal
+  run: {}
+  paragraph: {}
+- id: Information
+  name: null
+  basedOn: Date1
+  next: Abstract
+  run:
+    bold: true
+  paragraph:
+    indent_left: 0
+    indent_hanging: 0
+- id: Reference
+  name: null
+  basedOn: Normal
+  next: Normal
+  run:
+    fontEastAsia: 黑体;SimHei
+    bold: true
+  paragraph:
+    spacing_before: 280
+    spacing_after: 0
+    alignment: left
+    outlineLevel: 0
+- id: TextofReference
+  name: null
+  run:
+    font: Times New Roman
+    fontEastAsia: 宋体;SimSun
+    fontSize: 15
+    fontSizeCs: 20
+    fontColor: auto
+  paragraph:
+    spacing_line: 260
+    spacing_lineRule: exact
+    alignment: both
+    widowControl: true
+- id: TextofReference1
+  name: null
+  run:
+    font: Times New Roman
+    fontEastAsia: 宋体;SimSun
+    fontSize: 15
+    fontSizeCs: 20
+    fontColor: auto
+  paragraph:
+    spacing_line: 260
+    spacing_lineRule: exact
+    alignment: both
+    widowControl: true
+- id: Textof
+  name: null
+  basedOn: TextofReference
+  run: {}
+  paragraph:
+    indent_left: 258
+    indent_hanging: 258
+- id: Textof1
+  name: null
+  basedOn: Textof
+  run: {}
+  paragraph: {}
+- id: Style20
+  name: null
+  basedOn: Normal
+  run: {}
+  paragraph:
+    spacing_before: 0
+    spacing_after: 120
+- id: Style21
+  name: null
+  basedOn: TextBody
+  next: TextBody
+  run:
+    fontEastAsia: 黑体;SimHei
+  paragraph: {}
+- id: Style22
+  name: null
+  basedOn: Normal
+  run: {}
+  paragraph:
+    alignment: left
+- id: Style23
+  name: null
+  basedOn: Header
+  run: {}
+  paragraph:
+    alignment: both
+- id: Style24
+  name: null
+  basedOn: Style19
+  run:
+    bold: true
+  paragraph:
+    indent_left: 0
+    indent_hanging: 0
+- id: Style25
+  name: null
+  basedOn: Style21
+  run:
+    fontEastAsia: 仿宋_GB2312;仿宋
+  paragraph: {}
+- id: Style26
+  name: null
+  basedOn: Style21
+  next: Reference
+  run:
+    fontEastAsia: 宋体;SimSun
+  paragraph:
+    spacing_before: 100
+    spacing_after: 0
+    indent_hanging: 0
+- id: Style27
+  name: null
+  basedOn: Reference
+  next: TextBody
+  run:
+    bold: true
+  paragraph:
+    spacing_before: 240
+    spacing_after: 0
+- id: Style28
+  name: null
+  basedOn: Normal
+  run:
+    fontSizeCs: 18
+  paragraph: {}
+- id: Style29
+  name: null
+  basedOn: Normal
+  run:
+    font: 宋体;SimSun
+    fontSize: 24
+    fontSizeCs: 24
+  paragraph:
+    spacing_before: 280
+    spacing_after: 280
+    alignment: left
+    widowControl: true
+- id: TableContents
+  name: null
+  basedOn: Normal
+  run: {}
+  paragraph:
+    widowControl: true
+- id: TableHeading
+  name: null
+  basedOn: TableContents
+  run:
+    bold: true
+  paragraph:
+    alignment: center
+character_styles:
+- id: WW8Num1z0
+  name: null
+  run:
+    fontColor: '000000'
+- id: WW8Num2z0
+  name: null
+  run: {}
+- id: WW8Num2z1
+  name: null
+  run: {}
+- id: WW8Num3z0
+  name: null
+  run:
+    font: Times New Roman
+    fontSize: 21
+    bold: true
+    italic: true
+- id: WW8Num3z1
+  name: null
+  run:
+    font: Times New Roman
+    fontSize: 18
+    bold: true
+    italic: true
+- id: WW8Num3z2
+  name: null
+  run:
+    font: Times New Roman
+    fontSize: 18
+    bold: true
+    italic: true
+- id: WW8Num3z4
+  name: null
+  run: {}
+- id: WW8Num4z0
+  name: null
+  run:
+    fontSize: 15
+    fontSizeCs: 15
+- id: WW8Num5z0
+  name: null
+  run:
+    font: Times New Roman
+    fontEastAsia: 宋体;SimSun
+    fontSize: 15
+    bold: true
+    italic: true
+- id: WW8Num6z0
+  name: null
+  run: {}
+- id: WW8Num7z0
+  name: null
+  run: {}
+- id: WW8Num8z0
+  name: null
+  run: {}
+- id: WW8Num9z0
+  name: null
+  run: {}
+- id: WW8Num10z0
+  name: null
+  run:
+    font: 宋体;SimSun
+    bold: true
+- id: WW8Num11z0
+  name: null
+  run:
+    font: Times New Roman
+- id: Style5
+  name: null
+  run: {}
+- id: WW8Num1z1
+  name: null
+  run:
+    font: Times New Roman
+    fontSize: 18
+    bold: true
+    italic: true
+- id: WW8Num1z2
+  name: null
+  run:
+    font: Times New Roman
+    fontSize: 18
+    bold: true
+    italic: true
+- id: AbsatzStandardschriftart
+  name: null
+  run: {}
+- id: WWAbsatzStandardschriftart
+  name: null
+  run: {}
+- id: WW
+  name: null
+  run: {}
+- id: WWAbsatzStandardschriftart1
+  name: null
+  run: {}
+- id: WWAbsatzStandardschriftart11
+  name: null
+  run: {}
+- id: WWAbsatzStandardschriftart111
+  name: null
+  run: {}
+- id: WW1
+  name: null
+  run: {}
+- id: WW8Num4z1
+  name: null
+  run:
+    font: Times New Roman
+    fontSize: 18
+    bold: true
+    italic: true
+- id: WW8Num4z2
+  name: null
+  run:
+    font: Times New Roman
+    fontSize: 18
+    bold: true
+    italic: true
+- id: WW11
+  name: null
+  run: {}
+- id: CharChar12
+  name: null
+  basedOn: WW11
+  run:
+    fontEastAsia: ·s²Ó©úÅé;Malgun Gothic Semilight
+    fontSize: 18
+- id: CharChar11
+  name: null
+  basedOn: WW11
+  run:
+    fontEastAsia: 宋体;SimSun
+    fontSize: 18
+- id: CharChar10
+  name: null
+  basedOn: WW11
+  run:
+    fontEastAsia: 黑体;SimHei
+    fontSize: 36
+- id: Char
+  name: null
+  basedOn: WW11
+  run:
+    fontEastAsia: 宋体;SimSun
+    fontSize: 18
+- id: Style6
+  name: null
+  run: {}
+- id: Style7
+  name: null
+  run:
+    font: OpenSymbol;Courier New
+    fontEastAsia: OpenSymbol;Courier New
+- id: InternetLink
+  name: null
+  run:
+    fontColor: 000080
+    underline: single
+- id: 1Char
+  name: null
+  basedOn: Style5
+  run:
+    fontEastAsia: 宋体;SimSun
+    fontSize: 15
+- id: Shorttext1
+  name: null
+  basedOn: Style5
+  run:
+    fontSize: 19
+    fontSizeCs: 19
+- id: Mediumtext1
+  name: null
+  basedOn: Style5
+  run:
+    fontSize: 16
+    fontSizeCs: 16
+- id: Datatitle1
+  name: null
+  basedOn: Style5
+  run:
+    fontSize: 13
+    fontSizeCs: 13
+    fontColor: 10619F
+    bold: true
+- id: StrongEmphasis
+  name: null
+  basedOn: Style5
+  run:
+    bold: true
+- id: AbstractChar
+  name: null
+  basedOn: Style5
+  run:
+    fontEastAsia: 楷体_GB2312;楷体
+    fontSize: 18
+- id: KeywordsChar
+  name: null
+  basedOn: Style5
+  run:
+    fontEastAsia: 楷体_GB2312;楷体
+    fontSize: 18
+- id: Char1
+  name: null
+  basedOn: Char
+  run:
+    fontEastAsia: 楷体_GB2312;楷体
+- id: Char2
+  name: null
+  basedOn: Char1
+  run: {}
+- id: CharChar2
+  name: null
+  basedOn: Style5
+  run:
+    fontEastAsia: 黑体;SimHei
+    fontSize: 18
+- id: FootnoteCharacters
+  name: null
+  basedOn: Style5
+  run:
+    font: Monotype Sorts;MT Extra
+    fontEastAsia: 宋体;SimSun
+    fontSize: 11
+    fontSpacing: 0
+- id: Style8
+  name: null
+  basedOn: Style5
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+- id: EndnoteCharacters
+  name: null
+  basedOn: Style5
+  run: {}
+- id: Emphasis
+  name: null
+  basedOn: Style5
+  run:
+    fontColor: CC0033
+    bold: true
+    italic: true
+- id: CharChar1
+  name: null
+  basedOn: Style5
+  run:
+    fontSize: 18
+- id: CharChar
+  name: null
+  basedOn: Style5
+  run:
+    fontSize: 18
+    fontSizeCs: 18
+- id: PageNumber
+  name: null
+  basedOn: Style5
+  run: {}
+- id: FootnoteAnchor
+  name: null
+  run: {}
+- id: EndnoteAnchor
+  name: null
+  run: {}
+page:
+  width: 11906
+  height: 16838
+  margins:
+    top: 1474
+    bottom: 1474
+    left: 1134
+    right: 1134
+    header: 964
+    footer: 964
+    gutter: 0
+  columns:
+    count: 2
+    space: 424
+body_paragraph_formats:
+- index: 0
+  style: Subtitle
+  textSample: 题目*（中英文题目一致）字体为2号黑体(全文除特别声明外，外文统一用Times New Roman)* 题目
+  paragraph:
+    spacing_before: 624
+    spacing_after: 0
+    indent_firstLine: 879
+    alignment: center
+  run:
+    fontSize: 44
+    fontSizeCs: 44
+  runs:
+  - index: 0
+    run:
+      fontSize: 44
+      fontSizeCs: 44
+    textSample: 题目
+  - index: 1
+    run:
+      fontSize: 44
+      fontSizeCs: 44
+    textSample: '*'
+  - index: 2
+    run:
+      fontSize: 44
+      fontSizeCs: 44
+    textSample: （中英文题目一致）字体为
+  - index: 3
+    run:
+      fontSize: 44
+      fontSizeCs: 44
+    textSample: '2'
+  - index: 4
+    run:
+      fontSize: 44
+      fontSizeCs: 44
+    textSample: 号黑体
+  - index: 5
+    run:
+      fontSize: 44
+      fontSizeCs: 44
+    textSample: (
+  - index: 6
+    run:
+      fontSize: 44
+      fontSizeCs: 44
+    textSample: 全文除特别声明外，
+  - index: 7
+    run:
+      fontSize: 44
+      fontSizeCs: 44
+  - index: 8
+    run:
+      fontSize: 44
+      fontSizeCs: 44
+    textSample: 外文统一用
+  - index: 9
+    run:
+      fontSize: 44
+      fontSizeCs: 44
+    textSample: Times New Roman
+  - index: 10
+    run:
+      fontSize: 44
+      fontSizeCs: 44
+    textSample: )*
+  - index: 12
+    run:
+      fontColor: FF0000
+    textSample: 题目
+- index: 1
+  style: Style13
+  textSample: 作者名1)  作者名2),3)   作者名3) *字体为3号仿宋_GB2312*作者
+  paragraph:
+    spacing_before: 312
+    spacing_after: 312
+    spacing_line: 280
+    spacing_lineRule: atLeast
+    alignment: center
+  run:
+    fontSize: 32
+    fontSizeCs: 32
+  runs:
+  - index: 0
+    run:
+      fontSize: 32
+      fontSizeCs: 32
+    textSample: 作者名
+  - index: 1
+    run:
+      fontSize: 32
+      fontSizeCs: 32
+    textSample: 1)
+  - index: 2
+    run:
+      fontSize: 32
+      fontSizeCs: 32
+  - index: 3
+    run:
+      fontSize: 32
+      fontSizeCs: 32
+    textSample: 作者名
+  - index: 4
+    run:
+      fontSize: 32
+      fontSizeCs: 32
+    textSample: 2),3)
+  - index: 5
+    run:
+      fontSize: 32
+      fontSizeCs: 32
+  - index: 6
+    run:
+      fontSize: 32
+      fontSizeCs: 32
+    textSample: 作者名
+  - index: 7
+    run:
+      fontSize: 32
+      fontSizeCs: 32
+    textSample: '3'
+  - index: 8
+    run:
+      fontSize: 32
+      fontSizeCs: 32
+    textSample: )
+  - index: 9
+    run:
+      fontSize: 32
+      fontSizeCs: 32
+    textSample: '*'
+  - index: 10
+    run:
+      fontSize: 32
+      fontSizeCs: 32
+    textSample: 字体为
+  - index: 11
+    run:
+      fontSize: 32
+      fontSizeCs: 32
+    textSample: '3'
+  - index: 12
+    run:
+      fontSize: 32
+      fontSizeCs: 32
+    textSample: 号仿宋
+  - index: 13
+    run:
+      fontSize: 32
+      fontSizeCs: 32
+    textSample: _GB2312*
+  - index: 14
+    run:
+      fontColor: FF0000
+    textSample: 作者
+- index: 2
+  style: Style12
+  textSample: 1)(单位全名 部门(系)全名, 市(或直辖市) 国家名 邮政编码) *字体为6号宋体*单位
+  paragraph:
+    indent_left: 105
+    indent_hanging: 105
+    alignment: center
+  paragraph_run:
+    fontSize: 15
+    fontSizeCs: 15
+  run:
+    fontSize: 15
+    fontSizeCs: 15
+  runs:
+  - index: 0
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '1'
+  - index: 1
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+  - index: 2
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 3
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 单位全名
+  - index: 4
+    run:
+      fontEastAsia: Times New Roman
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 5
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 部门
+  - index: 6
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 7
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 系
+  - index: 8
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+  - index: 9
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 全名
+  - index: 10
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ','
+  - index: 11
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 12
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 市
+  - index: 13
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 14
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 或直辖市
+  - index: 15
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+  - index: 16
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 17
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 国家名
+  - index: 18
+    run:
+      fontEastAsia: Times New Roman
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 19
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 邮政编码
+  - index: 20
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+  - index: 21
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '*'
+  - index: 22
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 字体为
+  - index: 23
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '6'
+  - index: 24
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 号宋体
+  - index: 25
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '*'
+  - index: 26
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+    textSample: 单位
+- index: 3
+  style: Style12
+  textSample: 2)(单位全名 部门(系)全名, 市(或直辖市) 国家名 邮政编码)*中英文单位名称、作者姓名须一致*
+  paragraph:
+    indent_left: 105
+    indent_hanging: 105
+    alignment: center
+  paragraph_run:
+    fontSize: 15
+    fontSizeCs: 15
+  run:
+    fontSize: 15
+    fontSizeCs: 15
+  runs:
+  - index: 0
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '2'
+  - index: 1
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+  - index: 2
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 3
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 单位全名
+  - index: 4
+    run:
+      fontEastAsia: Times New Roman
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 5
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 部门
+  - index: 6
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 7
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 系
+  - index: 8
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+  - index: 9
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 全名
+  - index: 10
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ','
+  - index: 11
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 12
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 市
+  - index: 13
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 14
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 或直辖市
+  - index: 15
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+  - index: 16
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 17
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 国家名
+  - index: 18
+    run:
+      fontEastAsia: Times New Roman
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 19
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 邮政编码
+  - index: 20
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )*
+  - index: 21
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 中英文单位名称、作者姓名须一致
+  - index: 22
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '*'
+- index: 4
+  style: Style12
+  textSample: 3)(单位全名 部门(系)全名, 市(或直辖市) 国家名 邮政编码)
+  paragraph:
+    indent_left: 105
+    indent_hanging: 105
+    alignment: center
+  run:
+    fontSize: 15
+    fontSizeCs: 15
+  runs:
+  - index: 0
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '3'
+  - index: 1
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+  - index: 2
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 3
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 单位全名
+  - index: 4
+    run:
+      fontEastAsia: Times New Roman
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 5
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 部门
+  - index: 6
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 7
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 系
+  - index: 8
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+  - index: 9
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 全名
+  - index: 10
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ','
+  - index: 11
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 12
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 市
+  - index: 13
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 14
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 或直辖市
+  - index: 15
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+  - index: 16
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 17
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 国家名
+  - index: 18
+    run:
+      fontEastAsia: Times New Roman
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 19
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 邮政编码
+  - index: 20
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+- index: 5
+  style: Style12
+  textSample: 论文定稿后，作者署名、单位无特殊情况不能变更。若变更，须提交签章申请，国家名为中国可以不写，省会城市不写省的名称，其他国家必须写国家名。
+  paragraph:
+    spacing_before: 0
+    spacing_after: 249
+    indent_left: 105
+    indent_hanging: 105
+    alignment: center
+  run:
+    bold: true
+    fontColor: FF0000
+    fontSize: 15
+    fontSizeCs: 15
+  runs:
+  - index: 0
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: 论文定稿后，作者署名、单位无特殊情况不能变更。若变更，须提交签章申请，国家名为中国可以不写，省会城市不写省的名称，其他国家必须写国家名。
+- index: 6
+  style: Style18
+  textSample: 摘  要*中文摘要内容置于此处(英文摘要中要有这些内容)，字体为小5号宋体。摘要贡献部分，要有数据支持，不要出现“...大大提高”、“...显著改善”等描述，正确的描述是“比…提高X%”、
+    “在…上改善X%”。*摘要
+  paragraph_run:
+    fontSizeCs: 18
+  run:
+    fontEastAsia: 宋体;SimSun
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      font: 黑体;SimHei
+      fontEastAsia: 黑体;SimHei
+      fontSizeCs: 18
+    textSample: 摘  要
+  - index: 1
+    run:
+      fontSizeCs: 18
+  - index: 2
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: '*'
+  - index: 3
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: 中文摘要内容置于此处
+  - index: 4
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: (
+  - index: 5
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: 英文摘要中要有这些内容
+  - index: 6
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: )
+  - index: 7
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: ，字体为小
+  - index: 8
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: '5'
+  - index: 9
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: 号宋体。摘要贡献部分，要有数据支持，不要出现“
+  - index: 10
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: '...'
+  - index: 11
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: 大大提高”、“
+  - index: 12
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: '...'
+  - index: 13
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: 显著改善”等描述，正确的描述是“比
+  - index: 14
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: …
+  - index: 15
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: 提高
+  - index: 16
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: X%
+  - index: 17
+    run:
+      font: 宋体;SimSun
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: ”
+  - index: 18
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: 、
+  - index: 19
+    run:
+      fontEastAsia: Times New Roman
+      fontSizeCs: 18
+  - index: 20
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: “在
+  - index: 21
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: …
+  - index: 22
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: 上改善
+  - index: 23
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: X%
+  - index: 24
+    run:
+      font: 宋体;SimSun
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: ”
+  - index: 25
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: 。
+  - index: 26
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: '*'
+  - index: 27
+    run:
+      fontSizeCs: 18
+      fontColor: FF0000
+    textSample: 摘要
+- index: 7
+  style: Style19
+  textSample: 关键词*关键词（中文关键字与英文关键字对应且一致，应有5-7个关键词）；关键词；关键词；关键词* *关键词字体为小5号宋体*关键词
+  paragraph:
+    indent_left: 772
+    indent_hanging: 772
+  run:
+    fontEastAsia: 宋体;SimSun
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: 关键词
+  - index: 1
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: '*'
+  - index: 2
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: 关键词（中文关键字与英文关键字对应且一致，应有
+  - index: 3
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: 5-7
+  - index: 4
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: 个关键词）；关键词；关键词；关键词
+  - index: 5
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: '* *'
+  - index: 6
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: 关键词字体为小
+  - index: 7
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: '5'
+  - index: 8
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: 号宋体
+  - index: 9
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: '*'
+  - index: 10
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: 关键词
+- index: 8
+  style: Style17
+  textSample: 中图法分类号****　　　DOI号 *投稿时不提供DOI号* 分类号
+  run:
+    font: 宋体;SimSun
+    fontEastAsia: 宋体;SimSun
+  runs:
+  - index: 5
+    run:
+      fontEastAsia: Times New Roman
+  - index: 6
+    run:
+      font: 宋体;SimSun
+      fontEastAsia: 宋体;SimSun
+    textSample: '*'
+  - index: 7
+    run:
+      font: 宋体;SimSun
+      fontEastAsia: 宋体;SimSun
+    textSample: 投稿时不提供
+  - index: 8
+    run:
+      font: 宋体;SimSun
+      fontEastAsia: 宋体;SimSun
+    textSample: DOI
+  - index: 9
+    run:
+      font: 宋体;SimSun
+      fontEastAsia: 宋体;SimSun
+    textSample: 号
+  - index: 10
+    run:
+      font: 宋体;SimSun
+      fontEastAsia: 宋体;SimSun
+    textSample: '*'
+  - index: 12
+    run:
+      fontColor: FF0000
+    textSample: 分类号
+- index: 9
+  style: Title1
+  textSample: Title *（中英文题目一致）字体为4号Times New Roman,加粗* Title
+  paragraph:
+    alignment: center
+  paragraph_run:
+    fontSize: 28
+    fontSizeCs: 28
+  run:
+    fontSize: 28
+    fontSizeCs: 28
+  runs:
+  - index: 0
+    run:
+      fontSize: 28
+      fontSizeCs: 28
+    textSample: Title
+  - index: 1
+    run:
+      fontSize: 28
+      fontSizeCs: 28
+    textSample: '*'
+  - index: 2
+    run:
+      fontSize: 28
+      fontSizeCs: 28
+    textSample: （中英文题目一致）字体为
+  - index: 3
+    run:
+      fontSize: 28
+      fontSizeCs: 28
+    textSample: '4'
+  - index: 4
+    run:
+      fontSize: 28
+      fontSizeCs: 28
+    textSample: 号
+  - index: 5
+    run:
+      fontSize: 28
+      fontSizeCs: 28
+    textSample: Times N
+  - index: 6
+    run:
+      fontSize: 28
+      fontSizeCs: 28
+    textSample: e
+  - index: 7
+    run:
+      fontSize: 28
+      fontSizeCs: 28
+    textSample: w Roman,
+  - index: 8
+    run:
+      fontSize: 28
+      fontSizeCs: 28
+    textSample: 加粗
+  - index: 9
+    run:
+      fontSize: 28
+      fontSizeCs: 28
+    textSample: '*'
+  - index: 10
+    run:
+      fontSize: 28
+      fontSizeCs: 28
+  - index: 11
+    run:
+      fontSize: 28
+      fontSizeCs: 28
+      fontColor: FF0000
+    textSample: Title
+- index: 10
+  style: Name
+  textSample: NAME Name-Name1)  NAME Name2)  NAME Name-Name3)  *字体为5号Times new Roman*Name
+  paragraph:
+    alignment: center
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: NAME Name-Name
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '1'
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: )
+  - index: 3
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: NAME Name
+  - index: 4
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '2'
+  - index: 5
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: )
+  - index: 6
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: NAME Name-Name
+  - index: 7
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '3'
+  - index: 8
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: )
+  - index: 9
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+  - index: 10
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '*'
+  - index: 11
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 字体为
+  - index: 12
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '5'
+  - index: 13
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 号
+  - index: 14
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: Times new Roman*
+  - index: 15
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+      fontColor: FF0000
+    textSample: Name
+- index: 11
+  style: DepartCorrespond
+  textSample: 1)(Department of ****, University, City ZipCode, China) *字体为6号Times
+    new Roman* Depart.Correspond
+  paragraph:
+    indent_left: 99
+    indent_hanging: 99
+    alignment: center
+  paragraph_run:
+    fontSize: 15
+    fontSizeCs: 15
+  run:
+    fontSize: 15
+    fontSizeCs: 15
+  runs:
+  - index: 0
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '1'
+  - index: 1
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+  - index: 2
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 3
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: Department of ****, University, City ZipCode, China
+  - index: 4
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ) *
+  - index: 5
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 字体为
+  - index: 6
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '6'
+  - index: 7
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 号
+  - index: 8
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: Times new Roman*
+  - index: 9
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+    textSample: Depart.Correspond
+- index: 12
+  style: DepartCorrespond
+  textSample: 2)(Department of ****, University, City ZipCode)*中国不写国家名*
+  paragraph:
+    indent_left: 99
+    indent_hanging: 99
+    alignment: center
+  paragraph_run:
+    fontSize: 15
+    fontSizeCs: 15
+    fontColor: FF0000
+  run:
+    fontSize: 15
+    fontSizeCs: 15
+  runs:
+  - index: 0
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '2'
+  - index: 1
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+  - index: 2
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 3
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: Department of ****, University, City ZipCode
+  - index: 4
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )*
+  - index: 5
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 中国不写国家名
+  - index: 6
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '*'
+- index: 13
+  style: DepartCorrespond
+  textSample: 3)(Department of ****, University, City ZipCode, country)*外国写国家名*
+  paragraph:
+    indent_left: 99
+    indent_hanging: 99
+    alignment: center
+  paragraph_run:
+    fontSize: 15
+    fontSizeCs: 15
+    fontColor: FF0000
+  run:
+    fontSize: 15
+    fontSizeCs: 15
+  runs:
+  - index: 0
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '3'
+  - index: 1
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+  - index: 2
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 3
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: Department of ****, University, City ZipCode
+  - index: 4
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ','
+  - index: 5
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: country
+  - index: 6
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )*
+  - index: 7
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 外国写国家名
+  - index: 8
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '*'
+- index: 14
+  style: DepartCorrespond
+  paragraph:
+    indent_left: 106
+    indent_hanging: 106
+    alignment: center
+  paragraph_run:
+    fontSize: 15
+    fontSizeCs: 15
+    fontColor: FF0000
+  run:
+    fontColor: FF0000
+    fontSize: 15
+    fontSizeCs: 15
+  runs:
+  - index: 0
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+- index: 15
+  style: Abstract
+  textSample: Abstract*Abstract (500英文单词，内容包含中文摘要的内容). 字体为Times new Roman,字号5号* Abstract
+  paragraph_run:
+    fontEastAsia: 宋体;SimSun
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontEastAsia: 宋体;SimSun
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+      bold: true
+    textSample: Abstract
+  - index: 1
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+  - index: 2
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '*Abstract'
+  - index: 3
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: (
+  - index: 4
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+      fontColor: FF0000
+      bold: true
+    textSample: '500'
+  - index: 5
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+      fontColor: FF0000
+      bold: true
+    textSample: 英文单词，内容包含中文摘要的内容
+  - index: 6
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ).
+  - index: 7
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 字体为
+  - index: 8
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: Times new Roman
+  - index: 9
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ','
+  - index: 10
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 字号
+  - index: 11
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '5'
+  - index: 12
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 号
+  - index: 13
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '*'
+  - index: 14
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+      fontColor: FF0000
+    textSample: Abstract
+- index: 16
+  style: Keywords
+  textSample: Key words*key word（中文关键字与英文关键字对应且一致，不要用英文缩写）; key word; key word; key
+    word* *字体为5号Times new Roman * Key words
+  paragraph:
+    spacing_before: 0
+    spacing_after: 0
+    indent_left: 1332
+    indent_hanging: 1332
+  paragraph_run:
+    fontEastAsia: 宋体;SimSun
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontEastAsia: 宋体;SimSun
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+      bold: true
+    textSample: Key words
+  - index: 1
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+  - index: 2
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '*key word'
+  - index: 3
+    run:
+      fontEastAsia: 宋体;SimSun
+    textSample: （
+  - index: 4
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontColor: FF0000
+      bold: true
+    textSample: 中文关键字与英文关键字对应且一致
+  - index: 5
+    run:
+      fontEastAsia: 宋体;SimSun
+    textSample: ，
+  - index: 6
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontColor: FF0000
+      bold: true
+    textSample: 不要用英文缩写
+  - index: 7
+    run:
+      fontEastAsia: 宋体;SimSun
+    textSample: ）
+  - index: 8
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ; key word; key word; key word*
+  - index: 9
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '*'
+  - index: 10
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 字体为
+  - index: 11
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '5'
+  - index: 12
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 号
+  - index: 13
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: Tim
+  - index: 14
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: es new Roman
+  - index: 15
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '*'
+  - index: 16
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+      fontColor: FF0000
+    textSample: Key words
+- index: 17
+  style: Normal
+  paragraph:
+    indent_firstLine: 360
+    alignment: left
+  paragraph_run:
+    fontEastAsia: 宋体;SimSun
+    fontSize: 21
+    fontSizeCs: 18
+  run:
+    fontEastAsia: 宋体;SimSun
+    fontSize: 21
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontEastAsia: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 18
+- index: 18
+  style: Normal
+  paragraph:
+    indent_firstLine: 360
+    alignment: left
+  paragraph_run:
+    fontSizeCs: 18
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+- index: 20
+  style: Heading1
+  textSample: 一级标题*字体为4号黑体*标题1
+  paragraph_run:
+    fontSize: 28
+    fontSizeCs: 28
+    fontColor: FF0000
+    bold: true
+  run:
+    fontSize: 28
+    fontSizeCs: 28
+  runs:
+  - index: 0
+    run:
+      fontSize: 28
+      fontSizeCs: 28
+    textSample: 一级标题
+  - index: 1
+    run:
+      fontSize: 28
+      fontSizeCs: 28
+    textSample: '*'
+  - index: 2
+    run:
+      fontSize: 28
+      fontSizeCs: 28
+    textSample: 字体为
+  - index: 3
+    run:
+      fontSize: 28
+      fontSizeCs: 28
+    textSample: '4'
+  - index: 4
+    run:
+      fontSize: 28
+      fontSizeCs: 28
+    textSample: 号黑体
+  - index: 5
+    run:
+      fontSize: 28
+      fontSizeCs: 28
+    textSample: '*'
+  - index: 6
+    run:
+      fontSize: 28
+      fontSizeCs: 28
+      fontColor: FF0000
+    textSample: 标题
+  - index: 7
+    run:
+      fontSize: 28
+      fontSizeCs: 28
+      fontColor: FF0000
+      bold: true
+    textSample: '1'
+- index: 21
+  style: TextBody
+  textSample: 对投稿的基本要求：
+  paragraph:
+    indent_firstLine: 422
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    bold: true
+    fontColor: FF0000
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+      fontColor: FF0000
+      bold: true
+    textSample: 对投稿的基本要求
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+      fontColor: FF0000
+    textSample: ：
+- index: 22
+  style: TextBody
+  textSample: （1）研究性论文主体应包括引言（重点论述研究的科学问题、意义、解决思路、价值、贡献等）、相关工作（为与引言部分独立的一个章节）、主要成果论述、关键实现技术、验证（对比实验或理论证明）、结论（结束语）等内容；系统实现或实验应有关键点的详细论述
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: （
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '1'
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ）研究性论文主体应包括引言（重点论述研究的科学问题、意义、解决思路、价值、贡献等）、相关工作（为与引言部分独立的一个章节）、主要成果论述、关键实现技术、验证（对
+- index: 23
+  style: TextBody
+  textSample: （2）综述应包括引言、问题与挑战、研究现状分析、未来研究方向、结论等内容。以分析、对比为主，避免堆砌文献或一般性介绍、叙述。
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: （
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '2'
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ）综述应包括引言、问题与挑战、研究现状分析、未来研究方向、结论等内容。以分析、对比为主，避免堆砌文献或一般性介绍、叙述。
+- index: 24
+  style: TextBody
+  textSample: （3）定理证明、公式推导、大篇幅的数学论述、原始数据，放到论文最后的附录中。
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: （
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '3'
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ）定理证明、公式推导、大篇幅的数学论述、原始数据，放到论文最后的附录中。
+- index: 25
+  style: TextBody
+  textSample: 稿件提交时的基本要求：
+  paragraph:
+    indent_firstLine: 422
+  run:
+    bold: true
+    fontColor: FF0000
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+      fontColor: FF0000
+      bold: true
+    textSample: 稿件提交时的基本要求：
+- index: 26
+  style: TextBody
+  textSample: （1）本模板中要求的各项内容正确齐全，无遗漏；
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: （
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '1'
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ）本模板中要求的各项内容正确齐全，无遗漏；
+- index: 27
+  style: TextBody
+  textSample: （2）语句通顺，无中文、英文语法错误，易于阅读理解，符号使用正确，图、表清晰无误；
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: （
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '2'
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ）语句通顺，无中文、英文语法错误，易于阅读理解，符号使用正确，图、表清晰无误；
+- index: 28
+  style: TextBody
+  textSample: （3）在学术、技术上，论文内容正确无误，各项内容确定。
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: （
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '3'
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ）在学术、技术上，论文内容正确无误，各项内容确定。
+- index: 29
+  style: Heading2
+  textSample: 1.1  二级标题 *字体为5号黑体*标题2
+  paragraph:
+    spacing_before: 78
+    spacing_after: 78
+    indent_left: 0
+    indent_hanging: 0
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+      bold: true
+    textSample: '1.1'
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 二级标题
+  - index: 2
+    run:
+      fontEastAsia: Times New Roman
+      fontSize: 21
+      fontSizeCs: 21
+  - index: 3
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '*'
+  - index: 4
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 字体为
+  - index: 5
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '5'
+  - index: 6
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 号黑体
+  - index: 7
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '*'
+  - index: 8
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+      fontColor: FF0000
+    textSample: 标题
+  - index: 9
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+      fontColor: FF0000
+      bold: true
+    textSample: '2'
+- index: 30
+  style: Heading3
+  textSample: 1.1.1  三级标题 *字体为5号宋体*标题3
+  run:
+    fontColor: FF0000
+  runs:
+  - index: 2
+    run:
+      fontEastAsia: Times New Roman
+  - index: 8
+    run:
+      fontColor: FF0000
+    textSample: 标题
+  - index: 9
+    run:
+      fontColor: FF0000
+    textSample: '3'
+- index: 31
+  style: TextBody
+  textSample: '*正文部分, 字体为5号宋体* 正文文字'
+  paragraph:
+    indent_firstLine: 420
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '*'
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 正文部分
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ','
+  - index: 3
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 字体为
+  - index: 4
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '5'
+  - index: 5
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 号宋体
+  - index: 6
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '*'
+  - index: 7
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+      fontColor: FF0000
+    textSample: 正文文字
+- index: 32
+  style: TextBody
+  textSample: 文件排版采用MS Word。
+  paragraph:
+    indent_firstLine: 420
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 文件排版采用
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: MS Word
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 。
+- index: 33
+  style: TextBody
+  textSample: 正文文字要求语句通顺，无语法错误，结构合理，条理清楚，不影响审稿人、读者阅读理解全文内容。以下几类问题请作者们特别注意：
+  paragraph:
+    indent_firstLine: 422
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    bold: true
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+      bold: true
+    textSample: 正文文字要求语句通顺，无语法错误，结构合理，条理清楚，不影响审稿人、读者阅读理解全文内容。以下几类问题请作者们特别注意
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ：
+- index: 34
+  style: TextBody
+  textSample: 1)文章题目应明确反映文章的思想和方法；文字流畅，表述清楚；
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 1)
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 文章题目应明确反映文章的思想和方法；文字
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 流畅，表述清楚；
+- index: 35
+  style: TextBody
+  textSample: 2)中文文字、英文表达无语法错误；
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 2)
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 中文文字、英文
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 表达
+  - index: 3
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 无
+  - index: 4
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 语法
+  - index: 5
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 错误；
+- index: 36
+  style: TextBody
+  textSample: 3)公式中无符号、表达式的疏漏，没有同一个符号表示两种意思的情况；
+  paragraph:
+    indent_firstLine: 420
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 3)
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 公式中无符号、表达式的疏漏，
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 没有同一个符号表示两种意思的情况；
+- index: 37
+  style: TextBody
+  textSample: 4)数学中使用的符号、函数名用斜体；
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 4)
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 数学中使用的符号、函数名用斜体；
+- index: 38
+  style: TextBody
+  textSample: 5)使用的量符合法定计量单位标准；
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 5)
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 使用的量符合法定计量单位
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 标准
+  - index: 3
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ；
+- index: 39
+  style: TextBody
+  textSample: 6)矢量\向量、矩阵为黑体，标量为白体；
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 6)
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 矢量
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: \
+  - index: 3
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 向量
+  - index: 4
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 、
+  - index: 5
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 矩阵
+  - index: 6
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 为黑体，标量为白体
+  - index: 7
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ；
+- index: 40
+  style: TextBody
+  textSample: 7)变量或表示变化的量用斜体；
+  paragraph:
+    indent_firstLine: 420
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 7)
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 变量或表示变化的量用斜体；
+- index: 41
+  style: TextBody
+  textSample: 8)图表规范，量、线、序无误，位置正确（图表必须在正文中有所表述后出现，即…如图1所示）(注意纵、横坐标应有坐标名称和刻度值)。
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 8)
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 图表规范，量、线、序
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 无误
+  - index: 3
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ，位置正确
+  - index: 4
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: （图表必须在正文中有所表述后出现，即
+  - index: 5
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: …
+  - index: 6
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 如图
+  - index: 7
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '1'
+  - index: 8
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 所示）
+  - index: 9
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: (
+  - index: 10
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 注意纵、横坐标应有坐标名称和刻度值
+  - index: 11
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: )
+  - index: 12
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 。
+- index: 42
+  style: TextBody
+  textSample: 9)列出的参考文献必须在文中按顺序引用，即参考文献顺序与引用顺序一致，各项信息齐全(格式见参考文献部分)；
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 9)
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 列出的
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 参考文献
+  - index: 3
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 必须在文中按顺序引用，即参考文献顺序与引用顺序一致
+  - index: 4
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ，
+  - index: 5
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 各项信息
+  - index: 6
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 齐全
+  - index: 7
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: (
+  - index: 8
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 格式见
+  - index: 9
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 参考文献部分
+  - index: 10
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: )
+  - index: 11
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ；
+- index: 43
+  style: TextBody
+  textSample: 10）首次出现的缩写需写明全称，首次出现的符号需作出解释。
+  paragraph:
+    indent_firstLine: 420
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '10'
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ）首次出现的缩写需写明全称，首次出现的符号需作出解释。
+- index: 44
+  style: TextBody
+  textSample: 11）图的图例说明、坐标说明全部用中文或量符号。
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '11'
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ）图的图例说明、坐标说明全部用中文或量符号。
+- index: 45
+  style: TextBody
+  textSample: 12）图应为矢量图。
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '12'
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ）图应为矢量图。
+- index: 46
+  style: TextBody
+  textSample: 13）表中表头文字采用中文。
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '13'
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ）表中表头文字采用中文。
+- index: 47
+  style: TextBody
+  textSample: 14）公式尺寸：
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '14'
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ）
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 公式尺寸：
+- index: 48
+  style: TextBody
+  textSample: 标准：10.5磅
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 标准：
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '10.5'
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 磅
+- index: 49
+  style: TextBody
+  textSample: 下标/上标：5.8磅
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 下标
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: /
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 上标：
+  - index: 3
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '5.8'
+  - index: 4
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 磅
+- index: 50
+  style: TextBody
+  textSample: 次下标/上标：4.5磅
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 次下标
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: /
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 上标：
+  - index: 3
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '4.5'
+  - index: 4
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 磅
+- index: 51
+  style: TextBody
+  textSample: 符号：16磅
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 符号：
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '16'
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 磅
+- index: 52
+  style: TextBody
+  textSample: 次符号：10.5磅
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 次符号：
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '10.5'
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 磅
+- index: 53
+  style: TextBody
+  textSample: 15）组合单位采用标准格式，如：“pJ/bit/m4”应为 “pJ/(bit·m4)”
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '15'
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ）组合单位采用标准格式，如：“
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: pJ/bit/m
+  - index: 3
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '4'
+  - index: 4
+    run:
+      font: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ”
+  - index: 5
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 应为
+  - index: 6
+    run:
+      fontEastAsia: Times New Roman
+      fontSize: 21
+      fontSizeCs: 21
+  - index: 7
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: “
+  - index: 8
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: pJ/(bit
+  - index: 9
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ·
+  - index: 10
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: m
+  - index: 11
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '4'
+  - index: 12
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: )
+  - index: 13
+    run:
+      font: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ”
+- index: 54
+  style: TextBody
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+- index: 55
+  style: TextBody
+  textSample: 定理1.  ******. *定理内容.*
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontEastAsia: 黑体;SimHei
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 定理
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+      bold: true
+    textSample: '1.'
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '******'
+  - index: 3
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: .
+  - index: 4
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '*'
+  - index: 5
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 定理内容
+  - index: 6
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: .*
+- index: 56
+  style: TextBody
+  textSample: '[“定义”、“假设”、“公理”、“引理”等的排版格式与此相同，详细定理证明、公式可放在附录中]'
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+    bold: true
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '['
+  - index: 1
+    run:
+      font: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: “
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 定义”、“假设”、“公理”、“引理”等的排版格式与此相同，详细定理证明、公式可放在附录中
+  - index: 3
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ']'
+- index: 57
+  style: TextBody
+  textSample: 证明.  *证明过程.* [“例 x”等的排版格式相同]
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+    fontColor: 0000FF
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontEastAsia: 仿宋_GB2312;仿宋
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 证明
+  - index: 1
+    run:
+      fontEastAsia: 仿宋_GB2312;仿宋
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: .
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '*'
+  - index: 3
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 证明过程
+  - index: 4
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: .* [
+  - index: 5
+    run:
+      font: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: “
+  - index: 6
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 例
+  - index: 7
+    run:
+      fontEastAsia: Times New Roman
+      fontSize: 21
+      fontSizeCs: 21
+  - index: 8
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: x
+  - index: 9
+    run:
+      font: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ”
+  - index: 10
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 等的排版格式相同
+  - index: 11
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: ']'
+- index: 58
+  style: TextBody
+  textSample: 证毕.
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontColor: 0000FF
+    fontEastAsia: Times New Roman
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontEastAsia: Times New Roman
+      fontSize: 21
+      fontSizeCs: 21
+      fontColor: 0000FF
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 证毕
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: .
+- index: 59
+  style: TextBody
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+- index: 60
+  style: TextBody
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+- index: 61
+  style: TextBody
+  paragraph:
+    indent_firstLine: 420
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+- index: 62
+  style: Normal
+  paragraph:
+    alignment: center
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+- index: 63
+  style: Normal
+  textSample: 图X  图片说明 *字体为小5号，图片应为黑白图，图中的子图要有子图说明*
+  paragraph:
+    alignment: center
+  run:
+    font: 宋体;SimSun
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      font: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: 图
+  - index: 1
+    run:
+      font: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: X
+  - index: 2
+    run:
+      font: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: 图片说明
+  - index: 3
+    run:
+      font: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: '*'
+  - index: 4
+    run:
+      font: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: 字体为小
+  - index: 5
+    run:
+      font: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: '5'
+  - index: 6
+    run:
+      font: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: 号，图片应为
+  - index: 7
+    run:
+      font: 宋体;SimSun
+      fontSizeCs: 18
+      fontColor: FF0000
+    textSample: 黑白图，图中的子图要有子图说明
+  - index: 8
+    run:
+      font: 宋体;SimSun
+      fontSizeCs: 18
+    textSample: '*'
+- index: 64
+  style: Normal
+  paragraph:
+    alignment: center
+  paragraph_run:
+    font: 宋体;SimSun
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    font: 宋体;SimSun
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      font: 宋体;SimSun
+      fontSize: 21
+      fontSizeCs: 21
+- index: 65
+  style: Normal
+  textSample: 表X  表说明 *表说明采用黑体*
+  paragraph:
+    spacing_before: 156
+    spacing_after: 0
+    alignment: center
+  paragraph_run:
+    font: 黑体;SimHei
+    fontEastAsia: 黑体;SimHei
+    fontSizeCs: 18
+  run:
+    font: 黑体;SimHei
+    fontColor: FF0000
+    fontEastAsia: 黑体;SimHei
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      font: 黑体;SimHei
+      fontEastAsia: 黑体;SimHei
+      fontSizeCs: 18
+    textSample: 表
+  - index: 1
+    run:
+      font: 黑体;SimHei
+      fontEastAsia: 黑体;SimHei
+      fontSizeCs: 18
+    textSample: X
+  - index: 2
+    run:
+      font: 黑体;SimHei
+      fontEastAsia: 黑体;SimHei
+      fontSizeCs: 18
+    textSample: 表说明
+  - index: 3
+    run:
+      font: 黑体;SimHei
+      fontEastAsia: 黑体;SimHei
+      fontSizeCs: 18
+      fontColor: FF0000
+    textSample: '*'
+  - index: 4
+    run:
+      font: 黑体;SimHei
+      fontEastAsia: 黑体;SimHei
+      fontSizeCs: 18
+      fontColor: FF0000
+    textSample: 表说明采用黑体
+  - index: 5
+    run:
+      font: 黑体;SimHei
+      fontEastAsia: 黑体;SimHei
+      fontSizeCs: 18
+      fontColor: FF0000
+    textSample: '*'
+- index: 66
+  style: Normal
+  paragraph_run:
+    font: 黑体;SimHei
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    font: 黑体;SimHei
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      font: 黑体;SimHei
+      fontEastAsia: 黑体;SimHei
+      fontSize: 21
+      fontSizeCs: 21
+- index: 67
+  style: Normal
+  paragraph_run:
+    font: 黑体;SimHei
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    font: 黑体;SimHei
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      font: 黑体;SimHei
+      fontEastAsia: 黑体;SimHei
+      fontSize: 21
+      fontSizeCs: 21
+- index: 68
+  style: Normal
+  textSample: 过程 X.  过程名称
+  paragraph_run:
+    font: 黑体;SimHei
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    font: 黑体;SimHei
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      font: 黑体;SimHei
+      fontEastAsia: 黑体;SimHei
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 过程
+  - index: 1
+    run:
+      font: 黑体;SimHei
+      fontEastAsia: 黑体;SimHei
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: X.
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 过程名称
+- index: 69
+  style: Normal
+  textSample: '*《计算机学报》的方法过程描述字体为小5号宋体，IF 、THEN等伪代码关键词全部用大写字母，变量和函数名称用斜体*'
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+    textSample: '*'
+  - index: 1
+    run:
+      fontSizeCs: 18
+    textSample: 《计算机学报》的方法过程描述字体为小
+  - index: 2
+    run:
+      fontSizeCs: 18
+    textSample: '5'
+  - index: 3
+    run:
+      fontSizeCs: 18
+    textSample: 号宋体，
+  - index: 4
+    run:
+      fontSizeCs: 18
+    textSample: IF
+  - index: 5
+    run:
+      fontSizeCs: 18
+    textSample: 、
+  - index: 6
+    run:
+      fontSizeCs: 18
+    textSample: THEN
+  - index: 7
+    run:
+      fontSizeCs: 18
+    textSample: 等伪代码关键词全部用大写字母，变量和函数名称用斜体
+  - index: 8
+    run:
+      fontSizeCs: 18
+    textSample: '*'
+- index: 70
+  style: Normal
+  paragraph_run:
+    font: 黑体;SimHei
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    font: 黑体;SimHei
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      font: 黑体;SimHei
+      fontEastAsia: 黑体;SimHei
+      fontSize: 21
+      fontSizeCs: 21
+- index: 71
+  style: Normal
+  paragraph_run:
+    font: 黑体;SimHei
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    font: 黑体;SimHei
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      font: 黑体;SimHei
+      fontEastAsia: 黑体;SimHei
+      fontSize: 21
+      fontSizeCs: 21
+- index: 72
+  style: Normal
+  paragraph_run:
+    font: 黑体;SimHei
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    font: 黑体;SimHei
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      font: 黑体;SimHei
+      fontEastAsia: 黑体;SimHei
+      fontSize: 21
+      fontSizeCs: 21
+- index: 73
+  style: Normal
+  textSample: 算法Y.  算法名称.
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      font: 黑体;SimHei
+      fontEastAsia: 黑体;SimHei
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 算法
+  - index: 1
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+      bold: true
+    textSample: Y
+  - index: 2
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: .
+  - index: 3
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 算法名称
+  - index: 4
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: .
+- index: 74
+  style: Normal
+  textSample: 输入：… …
+  paragraph_run:
+    fontSizeCs: 18
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+    textSample: 输入：
+  - index: 1
+    run:
+      fontSizeCs: 18
+    textSample: …
+  - index: 2
+    run:
+      fontEastAsia: Times New Roman
+      fontSizeCs: 18
+  - index: 3
+    run:
+      fontSizeCs: 18
+    textSample: …
+- index: 75
+  style: Normal
+  textSample: 输出：… …
+  paragraph_run:
+    fontSizeCs: 18
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+    textSample: 输出：
+  - index: 1
+    run:
+      fontSizeCs: 18
+    textSample: …
+  - index: 2
+    run:
+      fontEastAsia: Times New Roman
+      fontSizeCs: 18
+  - index: 3
+    run:
+      fontSizeCs: 18
+    textSample: …
+- index: 76
+  style: Normal
+  textSample: '*《计算机学报》的算法描述字体为小5号宋体, IF 、THEN等伪代码关键词全部用大写字母，变量和函数名称用斜体*'
+  paragraph_run:
+    fontSizeCs: 18
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+    textSample: '*'
+  - index: 1
+    run:
+      fontSizeCs: 18
+    textSample: 《计算机学报》的算法描述字体为小
+  - index: 2
+    run:
+      fontSizeCs: 18
+    textSample: '5'
+  - index: 3
+    run:
+      fontSizeCs: 18
+    textSample: 号宋体
+  - index: 4
+    run:
+      fontSizeCs: 18
+    textSample: ', IF'
+  - index: 5
+    run:
+      fontSizeCs: 18
+    textSample: 、
+  - index: 6
+    run:
+      fontSizeCs: 18
+    textSample: THEN
+  - index: 7
+    run:
+      fontSizeCs: 18
+    textSample: 等伪代码关键词全部用大写字母，变量和函数名称用斜体
+  - index: 8
+    run:
+      fontSizeCs: 18
+    textSample: '*'
+- index: 77
+  style: Normal
+  paragraph_run:
+    fontSizeCs: 18
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+- index: 78
+  style: Normal
+  paragraph_run:
+    fontSizeCs: 18
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+- index: 79
+  style: Normal
+  textSample: 致  谢  *致谢内容.* 致谢
+  paragraph_run:
+    font: 楷体_GB2312;楷体
+    fontEastAsia: 楷体_GB2312;楷体
+    fontSize: 21
+    fontSizeCs: 21
+    fontColor: FF0000
+  run:
+    font: 黑体;SimHei
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      font: 黑体;SimHei
+      fontEastAsia: 黑体;SimHei
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 致  谢
+  - index: 1
+    run:
+      fontEastAsia: 楷体_GB2312;楷体
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: '*'
+  - index: 2
+    run:
+      font: 楷体_GB2312;楷体
+      fontEastAsia: 楷体_GB2312;楷体
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 致谢内容
+  - index: 3
+    run:
+      fontEastAsia: 楷体_GB2312;楷体
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: .*
+  - index: 4
+    run:
+      font: 楷体_GB2312;楷体
+      fontEastAsia: 楷体_GB2312;楷体
+      fontSize: 21
+      fontSizeCs: 21
+  - index: 5
+    run:
+      font: 楷体_GB2312;楷体
+      fontEastAsia: 楷体_GB2312;楷体
+      fontSize: 21
+      fontSizeCs: 21
+      fontColor: FF0000
+    textSample: 致谢
+- index: 80
+  style: Normal
+  paragraph_run:
+    font: 楷体_GB2312;楷体
+    fontEastAsia: 楷体_GB2312;楷体
+    fontSize: 21
+    fontSizeCs: 21
+    fontColor: FF0000
+  run:
+    font: 楷体_GB2312;楷体
+    fontColor: FF0000
+    fontEastAsia: 楷体_GB2312;楷体
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      font: 楷体_GB2312;楷体
+      fontEastAsia: 楷体_GB2312;楷体
+      fontSize: 21
+      fontSizeCs: 21
+      fontColor: FF0000
+- index: 81
+  style: Normal
+  paragraph_run:
+    font: 楷体_GB2312;楷体
+    fontEastAsia: 楷体_GB2312;楷体
+    fontSize: 21
+    fontSizeCs: 21
+    fontColor: FF0000
+  run:
+    font: 楷体_GB2312;楷体
+    fontColor: FF0000
+    fontEastAsia: 楷体_GB2312;楷体
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      font: 楷体_GB2312;楷体
+      fontEastAsia: 楷体_GB2312;楷体
+      fontSize: 21
+      fontSizeCs: 21
+      fontColor: FF0000
+- index: 82
+  style: Normal
+  paragraph_run:
+    font: 楷体_GB2312;楷体
+    fontEastAsia: 楷体_GB2312;楷体
+    fontSize: 21
+    fontSizeCs: 21
+    fontColor: FF0000
+  run:
+    font: 楷体_GB2312;楷体
+    fontColor: FF0000
+    fontEastAsia: 楷体_GB2312;楷体
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      font: 楷体_GB2312;楷体
+      fontEastAsia: 楷体_GB2312;楷体
+      fontSize: 21
+      fontSizeCs: 21
+      fontColor: FF0000
+- index: 83
+  style: Normal
+  paragraph_run:
+    font: 楷体_GB2312;楷体
+    fontEastAsia: 楷体_GB2312;楷体
+    fontSize: 21
+    fontSizeCs: 21
+    fontColor: FF0000
+  run:
+    font: 楷体_GB2312;楷体
+    fontColor: FF0000
+    fontEastAsia: 楷体_GB2312;楷体
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      font: 楷体_GB2312;楷体
+      fontEastAsia: 楷体_GB2312;楷体
+      fontSize: 21
+      fontSizeCs: 21
+      fontColor: FF0000
+- index: 84
+  style: Normal
+  textSample: 参 考 文 献
+  paragraph:
+    spacing_before: 312
+    spacing_after: 312
+    spacing_line: 320
+    spacing_lineRule: atLeast
+    alignment: center
+    outlineLevel: 0
+  paragraph_run:
+    fontSizeCs: 18
+  run:
+    font: 黑体;SimHei
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      font: 黑体;SimHei
+      fontEastAsia: 黑体;SimHei
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 参 考 文 献
+- index: 85
+  style: Normal
+  textSample: '[1] 网上的文献(举例：The Cooperative Association for Internet Data Analysis(CAIDA),http://www.caida.org/data
+    2010,7,18)*请采用脚注放于正'
+  paragraph:
+    spacing_line: 280
+    spacing_lineRule: atLeast
+    indent_left: 252
+    indent_hanging: 252
+  paragraph_run:
+    fontSize: 15
+    fontSizeCs: 15
+  run:
+    fontSize: 15
+    fontSizeCs: 15
+  runs:
+  - index: 0
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '[1]'
+  - index: 1
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 网上的文献
+  - index: 2
+    run:
+      fontSize: 18
+      fontSizeCs: 15
+  - index: 3
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 4
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 举例：
+  - index: 5
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: The Cooperative Association for Internet Data
+  - index: 6
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 7
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: Analysis(CAIDA),http://www.caida.org/data 2010,7,1
+  - index: 8
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 8)
+  - index: 9
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: '*'
+  - index: 10
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: 请采用
+  - index: 11
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: 脚注
+  - index: 12
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: 放于正文出现处，每页的脚注从
+  - index: 13
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: '1'
+  - index: 14
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: 开始编序号
+  - index: 15
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: '*'
+- index: 86
+  style: Normal
+  textSample: '[2] 中文的参考文献需给出中英文对照。形式如[3]。'
+  paragraph:
+    spacing_line: 280
+    spacing_lineRule: atLeast
+    indent_left: 359
+    indent_hanging: 359
+  paragraph_run:
+    fontSize: 15
+    fontSizeCs: 15
+  run:
+    fontSize: 15
+    fontSizeCs: 15
+  runs:
+  - index: 0
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '[2]'
+  - index: 1
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 中文的参考文献需给出中英文对照。形式如
+  - index: 2
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '[3]'
+  - index: 3
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 。
+- index: 87
+  style: Normal
+  textSample: '[3] Zhou Yong-Bin, Feng Deng-Guo. Design and analysis of cryptographic
+    protocols for RFID. Chinese Journal of Computers,'
+  paragraph:
+    spacing_line: 280
+    spacing_lineRule: atLeast
+    indent_left: 308
+    indent_hanging: 308
+  paragraph_run:
+    fontSize: 15
+    fontSizeCs: 15
+  run:
+    fontSize: 15
+    fontSizeCs: 15
+  runs:
+  - index: 0
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '[3]'
+  - index: 1
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: Zhou Yong
+  - index: 2
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '-'
+  - index: 3
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: Bin
+  - index: 4
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ','
+  - index: 5
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: Feng Deng
+  - index: 6
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '-'
+  - index: 7
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: Guo
+  - index: 8
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: .
+  - index: 9
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: Design and analysis of cryptographic protocols for RFID
+  - index: 10
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: . Chinese Journal of Computers,
+  - index: 11
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 2006, 29(4)
+  - index: 12
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ':'
+  - index: 13
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 581-589 (in Chinese)
+  - index: 14
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 15
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 周永彬
+  - index: 16
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ','
+  - index: 17
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 冯登国
+  - index: 18
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: . RFID
+  - index: 19
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 安全协议的设计与分析
+  - index: 20
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: .
+  - index: 21
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 计算机学报
+  - index: 22
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ','
+  - index: 23
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 2006, 29(4)
+  - index: 24
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ':'
+  - index: 25
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 581-589
+  - index: 26
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+- index: 88
+  style: Normal
+  textSample: '[4] 期刊、会议、书籍名称不能用缩写。'
+  paragraph:
+    spacing_line: 280
+    spacing_lineRule: atLeast
+    indent_left: 308
+    indent_hanging: 308
+  paragraph_run:
+    fontSize: 15
+    fontSizeCs: 15
+  run:
+    fontSize: 15
+    fontSizeCs: 15
+  runs:
+  - index: 0
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '[4]'
+  - index: 1
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 期刊、会议、书籍名称不能用缩写。
+- index: 89
+  style: Normal
+  textSample: '[编号]  作者(外国人姓在前，名在后可缩写, 后同). 题目(英文题目第一字母大写，其它均小写)：副标题(如果有). 刊名(全称),
+    年, 卷(期): 页码 *期刊论文格式*'
+  paragraph:
+    spacing_line: 280
+    spacing_lineRule: atLeast
+    indent_left: 546
+    indent_hanging: 546
+    alignment: left
+  paragraph_run:
+    fontSize: 15
+    fontSizeCs: 15
+  run:
+    fontSize: 15
+    fontSizeCs: 15
+  runs:
+  - index: 0
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '['
+  - index: 1
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 编号
+  - index: 2
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ']'
+  - index: 3
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 4
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 作者
+  - index: 5
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 6
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 外国人姓在前，名在后可缩写
+  - index: 7
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ','
+  - index: 8
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 后同
+  - index: 9
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ).
+  - index: 10
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 11
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 题目
+  - index: 12
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 13
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 英文题目第一字母大写，其它均小写
+  - index: 14
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+  - index: 15
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ：副标题
+  - index: 16
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 17
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 如果有
+  - index: 18
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+  - index: 19
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: .
+  - index: 20
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 21
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 刊名
+  - index: 22
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 23
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 全称
+  - index: 24
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+  - index: 25
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ','
+  - index: 26
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 27
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 年
+  - index: 28
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ','
+  - index: 29
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 30
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 卷
+  - index: 31
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 32
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 期
+  - index: 33
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '):'
+  - index: 34
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 页码
+  - index: 35
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 36
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: '*'
+  - index: 37
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: 期刊
+  - index: 38
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: 论文格式
+  - index: 39
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: '*'
+- index: 90
+  style: Normal
+  textSample: '[编号]  作者. 文章题目(英文题目第1字母大写，其它均小写)：副标题(如果有)//Proceedings of the … (会议名称).
+    会议召开城市, 会议召开城市所在国家, 年: 页码 *会议论文集论文格式*'
+  paragraph:
+    spacing_line: 280
+    spacing_lineRule: atLeast
+    indent_left: 546
+    indent_hanging: 546
+    alignment: left
+  paragraph_run:
+    fontSize: 15
+    fontSizeCs: 15
+  run:
+    fontSize: 15
+    fontSizeCs: 15
+  runs:
+  - index: 0
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '['
+  - index: 1
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 编号
+  - index: 2
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ']'
+  - index: 3
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 4
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 5
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 作者
+  - index: 6
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: .
+  - index: 7
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 8
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 文章题目
+  - index: 9
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 10
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 英文题目第
+  - index: 11
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '1'
+  - index: 12
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 字母大写，其它均小写
+  - index: 13
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+  - index: 14
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ：副标题
+  - index: 15
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 16
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 如果有
+  - index: 17
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )//Proceedings of the
+  - index: 18
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: …
+  - index: 19
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 20
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 会议名称
+  - index: 21
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ).
+  - index: 22
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 会议召开城市
+  - index: 23
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ','
+  - index: 24
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 会议召开城市所在国家
+  - index: 25
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ','
+  - index: 26
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 年
+  - index: 27
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ':'
+  - index: 28
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 页码
+  - index: 29
+    run:
+      fontEastAsia: Times New Roman
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 30
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 31
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: '*'
+  - index: 32
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: 会议论文集论文格式
+  - index: 33
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: '*'
+- index: 91
+  style: Normal
+  textSample: '[编号]  作者. 文章题目(英文题目第一字母大写, 其它均小写): 副标题(如果有)//编者. 文集标题. 出版地: 出版社, 出版年:
+    页码*文集格式*'
+  paragraph:
+    spacing_line: 280
+    spacing_lineRule: atLeast
+    indent_left: 546
+    indent_hanging: 546
+    alignment: left
+  paragraph_run:
+    fontSize: 15
+    fontSizeCs: 15
+  run:
+    fontSize: 15
+    fontSizeCs: 15
+  runs:
+  - index: 0
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '['
+  - index: 1
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 编号
+  - index: 2
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ']'
+  - index: 3
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 4
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 5
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 作者
+  - index: 6
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: .
+  - index: 7
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 8
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 文章题目
+  - index: 9
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 10
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 英文题目第一字母大写
+  - index: 11
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ','
+  - index: 12
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 其它均小写
+  - index: 13
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+  - index: 14
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ':'
+  - index: 15
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 副标题
+  - index: 16
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 17
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 如果有
+  - index: 18
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )//
+  - index: 19
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 编者
+  - index: 20
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: .
+  - index: 21
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 文集标题
+  - index: 22
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: .
+  - index: 23
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 出版地
+  - index: 24
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ':'
+  - index: 25
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 出版社
+  - index: 26
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ','
+  - index: 27
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 出版
+  - index: 28
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 年
+  - index: 29
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ':'
+  - index: 30
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 页码
+  - index: 31
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 32
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: '*'
+  - index: 33
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: 文集
+  - index: 34
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: 格式
+  - index: 35
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: '*'
+- index: 92
+  style: Normal
+  textSample: '[编号]  作者. 书名: 副标题(如果有). 版次(初版不写). 出版社地点: 出版社, 出版年 *书籍格式*'
+  paragraph:
+    spacing_line: 280
+    spacing_lineRule: atLeast
+    indent_left: 546
+    indent_hanging: 546
+    alignment: left
+  paragraph_run:
+    fontSize: 15
+    fontSizeCs: 15
+  run:
+    fontSize: 15
+    fontSizeCs: 15
+  runs:
+  - index: 0
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '['
+  - index: 1
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 编号
+  - index: 2
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ']'
+  - index: 3
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 4
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 5
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 作者
+  - index: 6
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: .
+  - index: 7
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 8
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 书名
+  - index: 9
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ':'
+  - index: 10
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 副标题
+  - index: 11
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 12
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 如果有
+  - index: 13
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: )
+  - index: 14
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: .
+  - index: 15
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 16
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 版次
+  - index: 17
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 18
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 初版不写
+  - index: 19
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ).
+  - index: 20
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 出版社地点
+  - index: 21
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ':'
+  - index: 22
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 出版社
+  - index: 23
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ','
+  - index: 24
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 出版
+  - index: 25
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 年
+  - index: 26
+    run:
+      fontEastAsia: Times New Roman
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 27
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 28
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: '*'
+  - index: 29
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: 书籍
+  - index: 30
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: 格式
+  - index: 31
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: '*'
+- index: 93
+  style: Normal
+  textSample: '[编号]  作者. 文章题目[博士学位论文/硕士学位论文]. 单位名称,单位地点, 年*学位论文格式*'
+  paragraph:
+    spacing_line: 280
+    spacing_lineRule: atLeast
+    indent_left: 546
+    indent_hanging: 546
+    alignment: left
+  paragraph_run:
+    fontSize: 15
+    fontSizeCs: 15
+  run:
+    fontSize: 15
+    fontSizeCs: 15
+  runs:
+  - index: 0
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '['
+  - index: 1
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 编号
+  - index: 2
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ']'
+  - index: 3
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 4
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 5
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 作者
+  - index: 6
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: .
+  - index: 7
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 8
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 文章题目
+  - index: 9
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '['
+  - index: 10
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 博士学位论文
+  - index: 11
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: /
+  - index: 12
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 硕士学位论文
+  - index: 13
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '].'
+  - index: 14
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 单位名称
+  - index: 15
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ','
+  - index: 16
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 单位地点
+  - index: 17
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ','
+  - index: 18
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 19
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 年
+  - index: 20
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 21
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: '*'
+  - index: 22
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: 学位论文
+  - index: 23
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: 格式
+  - index: 24
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: '*'
+- index: 94
+  style: Normal
+  textSample: '[编号]  作者. 文章题目(英文题目第一字母大写，其它均小写). 单位地点: 单位, 技术报告: 报告编号, 年 *技术报告*'
+  paragraph:
+    spacing_line: 280
+    spacing_lineRule: atLeast
+    indent_left: 546
+    indent_hanging: 546
+    alignment: left
+  paragraph_run:
+    fontSize: 15
+    fontSizeCs: 15
+  run:
+    fontSize: 15
+    fontSizeCs: 15
+  runs:
+  - index: 0
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '['
+  - index: 1
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 编号
+  - index: 2
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ']'
+  - index: 3
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 4
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 5
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 作者
+  - index: 6
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: .
+  - index: 7
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 8
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 文章题目
+  - index: 9
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: (
+  - index: 10
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 英文题目第一字母大写，其它均小写
+  - index: 11
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ).
+  - index: 12
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 单位地点
+  - index: 13
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ':'
+  - index: 14
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 单位
+  - index: 15
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ','
+  - index: 16
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 技术报告
+  - index: 17
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ':'
+  - index: 18
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 报告编号
+  - index: 19
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ','
+  - index: 20
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 年
+  - index: 21
+    run:
+      fontEastAsia: Times New Roman
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 22
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+  - index: 23
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: '*'
+  - index: 24
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: 技术报告
+  - index: 25
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: '*'
+- index: 95
+  style: Normal
+  textSample: '[编号]  专利拥有人. 专利名称，专利授权国家，专利授权日期'
+  paragraph:
+    indent_left: 672
+    indent_hanging: 672
+    alignment: left
+  paragraph_run:
+    fontEastAsia: 黑体;SimHei
+    fontSize: 16
+    fontSizeCs: 16
+  run:
+    font: Calibri
+    fontSize: 15
+    fontSizeCs: 15
+  runs:
+  - index: 0
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: '['
+  - index: 1
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 编号
+  - index: 2
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: ']'
+  - index: 3
+    run:
+      font: Calibri
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 专利拥有人
+  - index: 4
+    run:
+      font: Calibri
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: .
+  - index: 5
+    run:
+      font: Calibri
+      fontSize: 15
+      fontSizeCs: 15
+    textSample: 专利名称，专利授权国家，专利授权日期
+- index: 96
+  style: Normal
+  textSample: '*技术专利*'
+  paragraph:
+    indent_left: 672
+    indent_hanging: 672
+    alignment: left
+  paragraph_run:
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontEastAsia: Times New Roman
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontEastAsia: Times New Roman
+      fontSize: 21
+      fontSizeCs: 21
+  - index: 1
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: '*'
+  - index: 2
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: 技术
+  - index: 3
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: 专利
+  - index: 4
+    run:
+      fontSize: 15
+      fontSizeCs: 15
+      fontColor: FF0000
+      bold: true
+    textSample: '*'
+- index: 97
+  style: Normal
+  paragraph:
+    indent_left: 672
+    indent_hanging: 672
+    alignment: left
+  paragraph_run:
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontEastAsia: 黑体;SimHei
+      fontSize: 21
+      fontSizeCs: 21
+- index: 98
+  style: Normal
+  paragraph:
+    indent_left: 672
+    indent_hanging: 672
+    alignment: left
+  paragraph_run:
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontEastAsia: 黑体;SimHei
+      fontSize: 21
+      fontSizeCs: 21
+- index: 99
+  style: Normal
+  paragraph:
+    indent_left: 672
+    indent_hanging: 672
+    alignment: left
+  paragraph_run:
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontEastAsia: 黑体;SimHei
+      fontSize: 21
+      fontSizeCs: 21
+- index: 101
+  style: Normal
+  paragraph_run:
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 18
+  run:
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontEastAsia: 黑体;SimHei
+      fontSize: 21
+      fontSizeCs: 18
+- index: 102
+  style: Normal
+  paragraph_run:
+    fontSizeCs: 18
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+- index: 103
+  style: Normal
+  textSample: 附录X.
+  paragraph:
+    indent_left: 308
+    indent_hanging: 308
+    alignment: left
+  paragraph_run:
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  run:
+    fontEastAsia: 黑体;SimHei
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontEastAsia: 黑体;SimHei
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: 附录
+  - index: 1
+    run:
+      fontEastAsia: 黑体;SimHei
+      fontSize: 21
+      fontSizeCs: 21
+    textSample: X.
+- index: 105
+  style: Normal
+  textSample: '*附录内容置于此处，字体为小5号宋体。附录内容包括：详细的定理证明、公式推导、原始数据等*'
+  paragraph:
+    indent_left: 308
+    indent_hanging: 308
+    alignment: left
+  paragraph_run:
+    fontSizeCs: 18
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+    textSample: '*'
+  - index: 1
+    run:
+      fontSizeCs: 18
+      fontColor: FF0000
+      bold: true
+    textSample: 附录内容
+  - index: 2
+    run:
+      fontSizeCs: 18
+    textSample: 置于此处，字体为小
+  - index: 3
+    run:
+      fontSizeCs: 18
+    textSample: '5'
+  - index: 4
+    run:
+      fontSizeCs: 18
+    textSample: 号宋体。附录内容包括：
+  - index: 5
+    run:
+      fontSizeCs: 18
+      fontColor: FF0000
+      bold: true
+    textSample: 详细的定理证明、公式推导、原始数据
+  - index: 6
+    run:
+      fontSizeCs: 18
+    textSample: 等
+  - index: 7
+    run:
+      fontSizeCs: 18
+    textSample: '*'
+- index: 106
+  style: Normal
+  paragraph:
+    indent_left: 308
+    indent_hanging: 308
+    alignment: left
+  paragraph_run:
+    fontSizeCs: 18
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+- index: 107
+  style: Normal
+  paragraph_run:
+    fontSizeCs: 18
+    bold: true
+  run:
+    bold: true
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+      bold: true
+- index: 108
+  style: Normal
+  paragraph_run:
+    fontSizeCs: 18
+    bold: true
+  run:
+    bold: true
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+      bold: true
+- index: 109
+  style: Normal
+  paragraph_run:
+    fontSizeCs: 18
+    bold: true
+  run:
+    bold: true
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+      bold: true
+- index: 110
+  style: Normal
+  paragraph_run:
+    fontSizeCs: 18
+    bold: true
+  run:
+    bold: true
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+      bold: true
+- index: 112
+  style: Normal
+  textSample: 第一作者照片(高清照片)第一作者照片(高清照片)Author1, … …*计算机学报第1作者提供照片电子图片，尺寸为1寸。英文作者介绍内容包括：出生年,学位(或目前学历),职称,主要研究领域（与中文作者介绍中的研究方向一致）.*
+    *字体为小
+  paragraph_run:
+    fontSizeCs: 18
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 1
+    run:
+      fontSizeCs: 18
+      bold: true
+    textSample: Author1
+  - index: 2
+    run:
+      fontSizeCs: 18
+    textSample: ', …'
+  - index: 3
+    run:
+      fontSizeCs: 18
+  - index: 4
+    run:
+      fontSizeCs: 18
+    textSample: …
+  - index: 5
+    run:
+      fontSizeCs: 18
+    textSample: '*'
+  - index: 6
+    run:
+      fontSizeCs: 18
+    textSample: 计算机学报第
+  - index: 7
+    run:
+      fontSizeCs: 18
+    textSample: '1'
+  - index: 8
+    run:
+      fontSizeCs: 18
+    textSample: 作者提供照片电子图片，尺寸为
+  - index: 9
+    run:
+      fontSizeCs: 18
+    textSample: '1'
+  - index: 10
+    run:
+      fontSizeCs: 18
+    textSample: 寸。英文作者介绍内容包括：
+  - index: 11
+    run:
+      fontSizeCs: 18
+    textSample: 出生年
+  - index: 12
+    run:
+      fontSizeCs: 18
+    textSample: ','
+  - index: 13
+    run:
+      fontSizeCs: 18
+    textSample: 学位
+  - index: 14
+    run:
+      fontSizeCs: 18
+    textSample: (
+  - index: 15
+    run:
+      fontSizeCs: 18
+    textSample: 或目前学历
+  - index: 16
+    run:
+      fontSizeCs: 18
+    textSample: ),
+  - index: 17
+    run:
+      fontSizeCs: 18
+    textSample: 职称
+  - index: 18
+    run:
+      fontSizeCs: 18
+    textSample: ','
+  - index: 19
+    run:
+      fontSizeCs: 18
+    textSample: 主要研究领域（
+  - index: 20
+    run:
+      fontSizeCs: 18
+      fontColor: FF0000
+      bold: true
+    textSample: 与中文作者介绍中的研究方向一致
+  - index: 21
+    run:
+      fontSizeCs: 18
+    textSample: ）
+  - index: 22
+    run:
+      fontSizeCs: 18
+    textSample: .
+  - index: 23
+    run:
+      fontSizeCs: 18
+    textSample: '* *'
+  - index: 24
+    run:
+      fontSizeCs: 18
+    textSample: 字体为小
+  - index: 25
+    run:
+      fontSizeCs: 18
+    textSample: '5'
+  - index: 26
+    run:
+      fontSizeCs: 18
+    textSample: 号
+  - index: 27
+    run:
+      fontSizeCs: 18
+    textSample: Times New Roman*
+- index: 113
+  style: Normal
+  textSample: AuthorX, … …*英文作者介绍内容包括：出生年,学位(或目前学历),职称,主要研究领域（与中文作者介绍中的研究方向一致）。* *字体为小5号Times
+    New Roman*
+  paragraph_run:
+    fontSizeCs: 18
+    bold: true
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 1
+    run:
+      fontSizeCs: 18
+      bold: true
+    textSample: AuthorX
+  - index: 2
+    run:
+      fontSizeCs: 18
+    textSample: ', …'
+  - index: 3
+    run:
+      fontSizeCs: 18
+  - index: 4
+    run:
+      fontSizeCs: 18
+    textSample: …
+  - index: 5
+    run:
+      fontSizeCs: 18
+    textSample: '*'
+  - index: 6
+    run:
+      fontSizeCs: 18
+    textSample: 英文作者介绍内容包括：
+  - index: 7
+    run:
+      fontSizeCs: 18
+    textSample: 出生年
+  - index: 8
+    run:
+      fontSizeCs: 18
+    textSample: ','
+  - index: 9
+    run:
+      fontSizeCs: 18
+    textSample: 学位
+  - index: 10
+    run:
+      fontSizeCs: 18
+    textSample: (
+  - index: 11
+    run:
+      fontSizeCs: 18
+    textSample: 或目前学历
+  - index: 12
+    run:
+      fontSizeCs: 18
+    textSample: ),
+  - index: 13
+    run:
+      fontSizeCs: 18
+    textSample: 职称
+  - index: 14
+    run:
+      fontSizeCs: 18
+    textSample: ','
+  - index: 15
+    run:
+      fontSizeCs: 18
+    textSample: 主要研究领域（
+  - index: 16
+    run:
+      fontSizeCs: 18
+      fontColor: FF0000
+      bold: true
+    textSample: 与中文作者介绍中的研究方向一致
+  - index: 17
+    run:
+      fontSizeCs: 18
+    textSample: ）。
+  - index: 18
+    run:
+      fontSizeCs: 18
+    textSample: '* *'
+  - index: 19
+    run:
+      fontSizeCs: 18
+    textSample: 字体为小
+  - index: 20
+    run:
+      fontSizeCs: 18
+    textSample: '5'
+  - index: 21
+    run:
+      fontSizeCs: 18
+    textSample: 号
+  - index: 22
+    run:
+      fontSizeCs: 18
+    textSample: Times New Roman*
+- index: 115
+  style: Normal
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+    bold: true
+  run:
+    bold: true
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+      bold: true
+- index: 116
+  style: Normal
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+    bold: true
+  run:
+    bold: true
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+      bold: true
+- index: 117
+  style: Normal
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+    bold: true
+  run:
+    bold: true
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+      bold: true
+- index: 118
+  style: Normal
+  paragraph_run:
+    fontSize: 21
+    fontSizeCs: 21
+    bold: true
+  run:
+    bold: true
+    fontSize: 21
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSize: 21
+      fontSizeCs: 21
+      bold: true
+- index: 119
+  style: Normal
+  textSample: Background
+  paragraph_run:
+    fontSize: 15
+    fontSizeCs: 18
+    bold: true
+  run:
+    bold: true
+    fontSizeCs: 21
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 21
+      bold: true
+    textSample: Background
+- index: 121
+  style: Normal
+  textSample: '*论文背景介绍为英文，字体为小5号Times New Roman体*'
+  paragraph:
+    indent_firstLine: 360
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+    textSample: '*'
+  - index: 1
+    run:
+      fontSizeCs: 18
+    textSample: 论文背景介绍为
+  - index: 2
+    run:
+      fontSizeCs: 18
+      fontColor: FF0000
+      bold: true
+    textSample: 英文
+  - index: 3
+    run:
+      fontSizeCs: 18
+    textSample: ，字体为小
+  - index: 4
+    run:
+      fontSizeCs: 18
+    textSample: '5'
+  - index: 5
+    run:
+      fontSizeCs: 18
+    textSample: 号
+  - index: 6
+    run:
+      fontSizeCs: 18
+    textSample: Times New Roman
+  - index: 7
+    run:
+      fontSizeCs: 18
+    textSample: 体
+  - index: 8
+    run:
+      fontSizeCs: 18
+    textSample: '*'
+- index: 122
+  style: Normal
+  textSample: 论文后面为400单词左右的英文背景介绍。介绍的内容包括：
+  paragraph:
+    indent_firstLine: 360
+  paragraph_run:
+    fontSizeCs: 18
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+    textSample: 论文后面为
+  - index: 1
+    run:
+      fontSizeCs: 18
+    textSample: '400'
+  - index: 2
+    run:
+      fontSizeCs: 18
+    textSample: 单词左右的
+  - index: 3
+    run:
+      fontSizeCs: 18
+    textSample: 英文背景介绍。介绍的内容包括：
+- index: 123
+  style: Normal
+  textSample: 本文研究的问题属于哪一个领域的什么问题。该类问题目前国际上解决到什么程度。
+  paragraph:
+    indent_firstLine: 360
+  paragraph_run:
+    fontSizeCs: 18
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+    textSample: 本文研究的问题属于哪一个领域的什么问题。该类问题目前国际上解决到什么程度。
+- index: 124
+  style: Normal
+  textSample: 本文将问题解决到什么程度。
+  paragraph:
+    indent_firstLine: 360
+  paragraph_run:
+    fontSizeCs: 18
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+    textSample: 本文将问题解决到什么程度。
+- index: 125
+  style: Normal
+  textSample: 课题所属的项目。
+  paragraph:
+    indent_firstLine: 360
+  paragraph_run:
+    fontSizeCs: 18
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+    textSample: 课题
+  - index: 1
+    run:
+      fontSizeCs: 18
+    textSample: 所属的项目
+  - index: 2
+    run:
+      fontSizeCs: 18
+    textSample: 。
+- index: 126
+  style: Normal
+  textSample: 项目的意义。
+  paragraph:
+    indent_firstLine: 360
+  paragraph_run:
+    fontSizeCs: 18
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+    textSample: 项目的意义。
+- index: 127
+  style: Normal
+  textSample: 本研究群体以往在这个方向上的研究成果。
+  paragraph:
+    indent_firstLine: 360
+  paragraph_run:
+    fontSizeCs: 18
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+    textSample: 本研究群体以往在这个方向上的研究成果。
+- index: 128
+  style: Normal
+  textSample: 本文的成果是解决大课题中的哪一部分，如果涉及863\973以及其项目、基金、研究计划，注意这些项目的英文名称应书写正确。
+  paragraph:
+    indent_firstLine: 360
+  paragraph_run:
+    fontSizeCs: 18
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+    textSample: 本文的成果是解决大课题中的哪一部分，如果涉及
+  - index: 1
+    run:
+      fontSizeCs: 18
+    textSample: 863\973
+  - index: 2
+    run:
+      fontSizeCs: 18
+    textSample: 以及其项目、基金、研究计划，注意这些项目的英文名称应书写正确。
+- index: 130
+  style: Normal
+  paragraph_run:
+    fontSizeCs: 18
+  run:
+    fontSizeCs: 18
+  runs:
+  - index: 0
+    run:
+      fontSizeCs: 18
+body_paragraph_formats_mode: style_enrichment
+numbering:
+- id: 1
+  abstractNumId: 1
+  levels:
+  - level: 0
+    start: 1
+    format: none
+    text: null
+    alignment: left
+    indent_left: 0
+    indent_hanging: 0
+  - level: 1
+    start: 1
+    format: none
+    text: null
+    alignment: left
+    indent_left: 0
+    indent_hanging: 0
+  - level: 2
+    start: 1
+    format: none
+    text: null
+    alignment: left
+    indent_left: 0
+    indent_hanging: 0
+  - level: 3
+    start: 1
+    format: none
+    text: null
+    alignment: left
+    indent_left: 0
+    indent_hanging: 0
+  - level: 4
+    start: 1
+    format: none
+    text: null
+    alignment: left
+    indent_left: 0
+    indent_hanging: 0
+  - level: 5
+    start: 1
+    format: none
+    text: null
+    alignment: left
+    indent_left: 0
+    indent_hanging: 0
+  - level: 6
+    start: 1
+    format: none
+    text: null
+    alignment: left
+    indent_left: 0
+    indent_hanging: 0
+  - level: 7
+    start: 1
+    format: none
+    text: null
+    alignment: left
+    indent_left: 0
+    indent_hanging: 0
+  - level: 8
+    start: 1
+    format: none
+    text: null
+    alignment: left
+    indent_left: 0
+    indent_hanging: 0
+- id: 2
+  abstractNumId: 2
+  levels:
+  - level: 0
+    start: 1
+    format: decimal
+    text: '%1'
+    alignment: left
+    indent_left: 420
+    indent_hanging: 420
+- id: 3
+  abstractNumId: 3
+  levels:
+  - level: 0
+    start: 1
+    format: decimal
+    text: '%1  '
+    alignment: left
+    indent_left: 0
+    indent_hanging: 0
+    font_ascii: Times New Roman
+    font_hAnsi: Times New Roman
+    font_cs: Times New Roman
+    fontSize: 21
+  - level: 1
+    start: 1
+    format: decimal
+    text: '%1.%2  '
+    alignment: left
+    indent_left: 0
+    indent_hanging: 0
+    font_ascii: Times New Roman
+    font_hAnsi: Times New Roman
+    font_cs: Times New Roman
+    fontSize: 18
+  - level: 2
+    start: 1
+    format: decimal
+    text: '%1.%2.%3  '
+    alignment: left
+    indent_left: 0
+    indent_hanging: 0
+    font_ascii: Times New Roman
+    font_hAnsi: Times New Roman
+    font_cs: Times New Roman
+    fontSize: 18
+  - level: 3
+    start: 1
+    format: decimal
+    text: '%1.%2.%3.%4  '
+    alignment: left
+    indent_left: 0
+    indent_hanging: 0
+    font_ascii: Times New Roman
+    font_hAnsi: Times New Roman
+    font_cs: Times New Roman
+    fontSize: 18
+  - level: 4
+    start: 1
+    format: decimal
+    text: '%1.%2.%3.%4.%5'
+    alignment: left
+    indent_left: 1008
+    indent_hanging: 1008
+  - level: 5
+    start: 1
+    format: decimal
+    text: '%1.%2.%3.%4.%5.%6'
+    alignment: left
+    indent_left: 1152
+    indent_hanging: 1152
+  - level: 6
+    start: 1
+    format: decimal
+    text: '%1.%2.%3.%4.%5.%6.%7'
+    alignment: left
+    indent_left: 1296
+    indent_hanging: 1296
+  - level: 7
+    start: 1
+    format: decimal
+    text: '%1.%2.%3.%4.%5.%6.%7.%8'
+    alignment: left
+    indent_left: 1440
+    indent_hanging: 1440
+  - level: 8
+    start: 1
+    format: decimal
+    text: '%1.%2.%3.%4.%5.%6.%7.%8.%9'
+    alignment: left
+    indent_left: 1584
+    indent_hanging: 1584
+- id: 4
+  abstractNumId: 4
+  levels:
+  - level: 0
+    start: 1
+    format: decimal
+    text: '[%1]  '
+    alignment: right
+    indent_left: 419
+    indent_hanging: 79
+    font_ascii: Times New Roman
+    font_hAnsi: Times New Roman
+    font_cs: Times New Roman
+    fontSize: 15
+fonts:
+- Times New Roman
+- Symbol
+- Arial
+- Liberation Serif
+- 宋体
+- OpenSymbol
+- Monotype Sorts
+- DejaVu Sans
+- 黑体
+- 楷体_GB2312
+- Calibri

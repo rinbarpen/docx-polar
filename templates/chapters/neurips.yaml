@@ -1,0 +1,107 @@
+# NeurIPS — Chapter Template
+venue:
+  name: "NeurIPS"
+  language: "en"
+  citation_format: "numbered"
+  page: { width: 12240, height: 15840, margins: { top: 1440, bottom: 1440, left: 1440, right: 1440 } }
+  style:
+    default_font: "Times New Roman"
+    default_font_size: 20   # 10pt
+    template_category: "neurips"
+
+chapters:
+  - id: "introduction"
+    heading: "Introduction"
+    level: 1
+    word_count_min: 500
+    word_count_max: 1000
+    min_figures: 1     # Conceptual figure
+    min_tables: 0
+    requirements_text: |
+      - Motivate the problem broadly
+      - Clearly state the research gap
+      - List contributions with bullet-level clarity
+    topics:
+      - "Background and motivation"
+      - "Problem statement"
+      - "Contributions"
+
+  - id: "related_work"
+    heading: "Related Work"
+    level: 1
+    word_count_min: 300
+    word_count_max: 800
+    min_figures: 0
+    min_tables: 0
+    requirements_text: |
+      - Categorize prior work
+      - Be concise
+      - Position this paper's novelty
+    topics:
+      - "Research direction 1"
+      - "Research direction 2"
+
+  - id: "method"
+    heading: "Method"
+    level: 1
+    word_count_min: 1500
+    word_count_max: 3000
+    min_figures: 1
+    min_tables: 0
+    requirements_text: |
+      - Formal problem definition first
+      - Present algorithm/method with theorems if applicable
+      - Include a method overview figure
+      - Provide theoretical justification if applicable
+    topics:
+      - "Problem formulation"
+      - "Proposed method"
+      - "Theoretical analysis"
+
+  - id: "experiments"
+    heading: "Experiments"
+    level: 1
+    word_count_min: 1500
+    word_count_max: 3000
+    min_figures: 2
+    min_tables: 2
+    requirements_text: |
+      - Standard benchmarks
+      - Compare with strong baselines
+      - Comprehensive ablation
+      - Error bars on all results
+      - Statistical significance tests
+      - Use omni-draw for figures, omni-sheet for tables
+    topics:
+      - "Experimental setup"
+      - "Main results"
+      - "Ablation studies"
+      - "Analysis and discussion"
+
+  - id: "conclusion"
+    heading: "Conclusion"
+    level: 1
+    word_count_min: 200
+    word_count_max: 500
+    min_figures: 0
+    min_tables: 0
+    requirements_text: |
+      - Summary of contributions
+      - Limitations discussed
+      - Future directions
+      - Broader impact (NeurIPS requirement)
+    topics:
+      - "Summary"
+      - "Limitations"
+      - "Broader impact"
+
+back_matter:
+  - element: "references"
+    min_count: 30
+    format: "numbered"
+
+# NeurIPS-specific
+ethics_statement:
+  required: true
+checklist:
+  required: true
