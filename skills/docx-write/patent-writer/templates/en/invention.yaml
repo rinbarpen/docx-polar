@@ -1,0 +1,65 @@
+# USPTO / EPO / PCT Invention Patent — YAML spec template for docx-write
+# Supports US, European (EP), and PCT international applications.
+# Copy this file, replace {{PLACEHOLDER}} values, then run:
+#   python scripts/write_docx.py your_spec.yaml --output patent.docx
+
+type: patent
+
+meta:
+  paper_name: "my-patent"
+
+page:
+  width: 11906
+  height: 16838
+  margins: { top: 1440, bottom: 1440, left: 1440, right: 1440 }
+
+patent:
+  jurisdiction: us  # us, ep, or pct
+  patent_type: invention
+  language: en
+  title: "{{INVENTION TITLE}}"
+  applicant: "{{APPLICANT NAME}}"
+  inventors:
+    - name: "{{Inventor One}}"
+    - name: "{{Inventor Two}}"
+  # uspc_class: "382/152"  # Optional: US patent classification
+  # related_applications: "This application claims priority to U.S. Provisional Application No. XX/XXX,XXX, filed ..."
+
+  # Abstract of the Disclosure
+  abstract: "{{A method for... includes receiving... processing... and generating...}}"
+
+  # Claims
+  claims:
+    - "1. A method comprising: {{core technical features}}."
+
+  # Drawings
+  drawings:
+    # - ref: "FIG. 1"
+    #   src: "figs/figure_1.png"
+    #   caption: "FIG. 1 is a schematic diagram of a system according to an embodiment of the present invention."
+
+# Specification body
+sections:
+  - heading: "FIELD OF THE INVENTION"
+    level: 1
+    content:
+      - type: paragraph
+        text: "{{The present invention relates to ... and more particularly to ...}}"
+
+  - heading: "BACKGROUND OF THE INVENTION"
+    level: 1
+    content:
+      - type: paragraph
+        text: "{{Description of prior art and its limitations.}}"
+
+  - heading: "BRIEF SUMMARY OF THE INVENTION"
+    level: 1
+    content:
+      - type: paragraph
+        text: "{{In one aspect, the present invention provides ...}}"
+
+  - heading: "DETAILED DESCRIPTION OF THE INVENTION"
+    level: 1
+    content:
+      - type: paragraph
+        text: "{{Embodiments of the present invention will now be described in detail with reference to the accompanying drawings.}}"

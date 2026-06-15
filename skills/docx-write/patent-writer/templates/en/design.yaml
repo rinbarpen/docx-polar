@@ -1,0 +1,59 @@
+# USPTO Design Patent — YAML spec template for docx-write
+# US design patents protect the ornamental design of an article (non-functional appearance).
+# Requires: title, inventor, description of figures, single claim, drawings.
+# Copy this file, replace {{PLACEHOLDER}} values, then run:
+#   python scripts/write_docx.py your_spec.yaml --output design_patent.docx
+
+type: patent
+
+meta:
+  paper_name: "my-design-patent"
+
+page:
+  width: 11906
+  height: 16838
+  margins: { top: 1440, bottom: 1440, left: 1440, right: 1440 }
+
+patent:
+  jurisdiction: us
+  patent_type: design
+  language: en
+  title: "{{ARTICLE TITLE}}"
+  inventors:
+    - name: "{{Inventor Name}}"
+
+  # Description of the figures (brief)
+  figure_description: "FIG. 1 is a perspective view of a {{article}} showing my new design.
+FIG. 2 is a front elevational view thereof.
+FIG. 3 is a rear elevational view thereof.
+FIG. 4 is a left side elevational view thereof.
+FIG. 5 is a right side elevational view thereof.
+FIG. 6 is a top plan view thereof.
+FIG. 7 is a bottom plan view thereof."
+
+  # Single claim
+  claim: "The ornamental design for a {{article}}, as shown and described."
+
+  # Figures (at minimum: perspective + front/rear/left/right/top/bottom)
+  drawings:
+    - ref: "FIG. 1"
+      # src: "figs/fig_1_perspective.png"
+      caption: "FIG. 1 is a perspective view of the {{article}}."
+    - ref: "FIG. 2"
+      # src: "figs/fig_2_front.png"
+      caption: "FIG. 2 is a front elevational view thereof."
+    - ref: "FIG. 3"
+      # src: "figs/fig_3_rear.png"
+      caption: "FIG. 3 is a rear elevational view thereof."
+    - ref: "FIG. 4"
+      # src: "figs/fig_4_left.png"
+      caption: "FIG. 4 is a left side elevational view thereof."
+    - ref: "FIG. 5"
+      # src: "figs/fig_5_right.png"
+      caption: "FIG. 5 is a right side elevational view thereof."
+    - ref: "FIG. 6"
+      # src: "figs/fig_6_top.png"
+      caption: "FIG. 6 is a top plan view thereof."
+    - ref: "FIG. 7"
+      # src: "figs/fig_7_bottom.png"
+      caption: "FIG. 7 is a bottom plan view thereof."

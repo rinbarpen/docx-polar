@@ -1,0 +1,67 @@
+# 中国实用新型专利 (CNIPA Utility Model) — YAML spec template for docx-write
+# 仅保护产品的形状/构造，不支持方法权利要求。附图是必须的。
+# Copy this file, replace {{PLACEHOLDER}} values, then run:
+#   python scripts/write_docx.py your_spec.yaml --output patent.docx
+
+type: patent
+
+meta:
+  paper_name: "my-utility-model"
+
+page:
+  width: 11906
+  height: 16838
+  margins: { top: 1440, bottom: 1440, left: 1440, right: 1440 }
+
+patent:
+  jurisdiction: cn
+  patent_type: utility_model
+  language: zh
+  title: "{{实用新型名称}}"
+  applicant: "{{申请人名称}}"
+  inventors:
+    - name: "{{发明人一}}"
+    - name: "{{发明人二}}"
+
+  abstract: "{{本实用新型公开了一种……针对现有产品……的不足，本实用新型提供了一种结构改进方案。}}"
+
+  # 权利要求书 — 只写产品结构权利要求，不写方法权利要求
+  claims:
+    - "1. 一种{{产品名称}}，其特征在于，包括：{{结构特征描述}}。"
+
+  # 实用新型附图是必须提交的文件
+  drawings:
+    - ref: "图1"
+      src: "figs/figure_1.png"
+      caption: "图1 {{本实用新型实施例的整体结构示意图}}"
+
+sections:
+  - heading: "技术领域"
+    level: 1
+    content:
+      - type: paragraph
+        text: "{{本实用新型涉及……技术领域，尤其涉及一种……}}"
+
+  - heading: "背景技术"
+    level: 1
+    content:
+      - type: paragraph
+        text: "{{现有产品的结构缺陷与不足}}"
+
+  - heading: "发明内容"
+    level: 1
+    content:
+      - type: paragraph
+        text: "{{本实用新型提供一种……结构，解决现有产品……问题。}}"
+
+  - heading: "附图说明"
+    level: 1
+    content:
+      - type: paragraph
+        text: "{{图1为本实用新型整体结构示意图；图2为本实用新型爆炸图。}}"
+
+  - heading: "具体实施方式"
+    level: 1
+    content:
+      - type: paragraph
+        text: "{{如图1所示，本实用新型一种实施例中……详细描述各零部件的结构、材质、尺寸范围、连接方式及工作原理。}}"

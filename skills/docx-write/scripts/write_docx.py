@@ -60,7 +60,14 @@ def _validate_docx(path: str) -> bool:
 
 
 def generate_js(spec: dict, output_path: str, spec_dir: str) -> str:
-    """Generate a complete Node.js script using docx-js to create the DOCX."""
+    """Generate a complete Node.js script using docx-js to create the DOCX.
+
+    Dispatches to gen_patent.generate_patent_js() when the spec type is 'patent'.
+    """
+    if spec.get("type") == "patent":
+        from gen_patent import generate_patent_js
+        return generate_patent_js(spec, output_path, spec_dir)
+
     page = spec.get("page", {})
     page_width = page.get("width", A4_WIDTH)
     page_height = page.get("height", A4_HEIGHT)

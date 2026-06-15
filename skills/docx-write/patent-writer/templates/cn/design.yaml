@@ -1,0 +1,49 @@
+# 中国外观设计专利 (CNIPA Design Patent) — YAML spec template for docx-write
+# 保护产品的形状/图案/色彩及其组合，不保护功能性技术方案。
+# 无需权利要求书和说明书，只需简要说明 + 视图。
+# Copy this file, replace {{PLACEHOLDER}} values, then run:
+#   python scripts/write_docx.py your_spec.yaml --output design_patent.docx
+
+type: patent
+
+meta:
+  paper_name: "my-design-patent"
+
+page:
+  width: 11906
+  height: 16838
+  margins: { top: 1440, bottom: 1440, left: 1440, right: 1440 }
+
+patent:
+  jurisdiction: cn
+  patent_type: design
+  language: zh
+  product_name: "{{产品名称}}"
+  applicants:
+    - name: "{{申请人名称}}"
+  inventors:
+    - name: "{{设计人}}"
+
+  # 简要说明
+  product_purpose: "{{本外观设计产品用于……}}"
+  design_features: "{{本外观设计的设计要点在于产品的整体形状，尤其是……}}"
+  primary_view: "{{立体效果图}}"  # 最能代表设计要点的视图名称
+  # color_protection: false  # 是否请求保护色彩
+  # local_design: false  # 是否为局部外观设计
+
+  # 六面视图 + 立体图
+  views:
+    - name: "正视图"
+      # src: "figs/view_front.png"
+    - name: "后视图"
+      # src: "figs/view_back.png"
+    - name: "左视图"
+      # src: "figs/view_left.png"
+    - name: "右视图"
+      # src: "figs/view_right.png"
+    - name: "俯视图"
+      # src: "figs/view_top.png"
+    - name: "仰视图"
+      # src: "figs/view_bottom.png"
+    - name: "立体效果图"
+      # src: "figs/view_perspective.png"

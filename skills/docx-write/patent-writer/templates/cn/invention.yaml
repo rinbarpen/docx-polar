@@ -1,0 +1,69 @@
+# 中国发明专利 (CNIPA Invention Patent) — YAML spec template for docx-write
+# Copy this file, replace {{PLACEHOLDER}} values, then run:
+#   python scripts/write_docx.py your_spec.yaml --output patent.docx
+
+type: patent
+
+meta:
+  paper_name: "my-invention-patent"
+
+page:
+  width: 11906
+  height: 16838
+  margins: { top: 1440, bottom: 1440, left: 1440, right: 1440 }
+
+patent:
+  jurisdiction: cn
+  patent_type: invention
+  language: zh
+  title: "{{发明名称}}"
+  applicant: "{{申请人名称}}"
+  inventors:
+    - name: "{{发明人一}}"
+    - name: "{{发明人二}}"
+  # ipc_class: "G06V 10/764"  # 可选，国际专利分类号
+
+  # 说明书摘要 (150-300字)
+  abstract: "{{本发明公开了一种……针对现有技术中……的不足，本发明提供了一种……方案。本发明实现了……}}"
+
+  # 权利要求书
+  claims:
+    - "1. 一种{{主题名称}}，其特征在于，包括：{{核心必要技术特征}}。"
+
+  # 附图清单
+  drawings:
+    # - ref: "图1"
+    #   src: "figs/figure_1.png"
+    #   caption: "本发明实施例中{{系统/方法}}的整体结构示意图"
+
+# 说明书正文 (依序排列)
+sections:
+  - heading: "技术领域"
+    level: 1
+    content:
+      - type: paragraph
+        text: "{{本发明涉及……技术领域，尤其涉及一种……}}"
+
+  - heading: "背景技术"
+    level: 1
+    content:
+      - type: paragraph
+        text: "{{现有技术中存在的问题与不足}}"
+
+  - heading: "发明内容"
+    level: 1
+    content:
+      - type: paragraph
+        text: "{{本发明的目的在于克服上述现有技术的不足，提供一种……}}"
+
+  - heading: "附图说明"
+    level: 1
+    content:
+      - type: paragraph
+        text: "{{图1为……示意图；图2为……流程图。}}"
+
+  - heading: "具体实施方式"
+    level: 1
+    content:
+      - type: paragraph
+        text: "{{为使本发明的目的、技术方案和优点更加清楚，下面结合附图对本发明实施例作进一步详细描述。}}"

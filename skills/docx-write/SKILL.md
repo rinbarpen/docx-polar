@@ -1,6 +1,6 @@
 ---
 name: docx-write
-description: "Generate a submission-ready DOCX from a structured YAML/JSON specification. Supports full paper structure: bilingual titles, authors with affiliations, bilingual abstracts, keywords, multi-level sections with paragraphs/images/tables/lists, numbered references, and figures with captions. Uses docx-js (Node.js) for document creation. Trigger when the user says 'generate docx from spec', 'write a paper docx', 'create document from yaml', 'produce word file from structured input', or wants to create a NEW DOCX from scratch with formatted content."
+description: "Generate a submission-ready DOCX from a structured YAML/JSON specification. Supports full paper structure (bilingual titles, authors, abstracts, keywords, sections, references) AND patent documents (CNIPA Chinese + USPTO/EPO/PCT English, all patent types: invention, utility model, design). Uses docx-js (Node.js) for document creation. Trigger when the user says 'generate docx from spec', 'write a paper docx', 'create document from yaml', 'write a patent docx', '生成专利申请文件', or wants to create a NEW DOCX from scratch with formatted content."
 ---
 
 # DOCX Write
@@ -141,12 +141,66 @@ python scripts/write_docx.py paper.yaml --skip-validate
 python scripts/write_docx.py paper.yaml --verbose
 ```
 
+## Patent Documents
+
+When `type: patent` is set in the spec, `docx-write` dispatches to the `patent-writer` subskill (see `patent-writer/SKILL.md`). This supports:
+
+| Jurisdiction | Patent Types | Language |
+|-------------|-------------|----------|
+| CN (CNIPA) | invention, utility_model, design | Chinese (zh) |
+| US (USPTO) | invention, design | English (en) |
+| EP (EPO) | invention | English (en) |
+| PCT | invention | English (en) |
+
+### Patent spec example (CN invention)
+
+```yaml
+type: patent
+patent:
+  jurisdiction: cn
+  patent_type: invention
+  language: zh
+  title: "一种基于深度学习的焊缝缺陷检测方法及系统"
+  applicant: "{{申请人}}"
+  inventors:
+    - name: "{{发明人}}"
+  abstract: "本发明公开了一种..."
+  claims:
+    - "1. 一种...方法，其特征在于，包括以下步骤：..."
+  drawings:
+    - ref: "图1"
+      src: "figs/figure_1.png"
+      caption: "本发明实施例中系统整体结构示意图"
+
+sections:
+  - heading: "技术领域"
+    level: 1
+    content:
+      - type: paragraph
+        text: "本发明涉及..."
+```
+
+### Template-based workflow
+
+```bash
+# Copy a template
+cp patent-writer/templates/cn/invention.yaml my_patent.yaml
+
+# Fill in {{PLACEHOLDER}} values, then generate
+python scripts/write_docx.py my_patent.yaml --output patent.docx
+```
+
+Templates are available in `patent-writer/templates/cn/` and `patent-writer/templates/en/`. See `patent-writer/references/` for writing guides.
+
+---
+
 ## How it works
 
 1. **Load spec** — Python reads the YAML/JSON specification
-2. **Generate JS** — Produces a Node.js script using the `docx-js` API
-3. **Execute** — Runs the JS script via `node` to create the DOCX
-4. **Validate** — Verifies the output is a well-formed DOCX (ZIP structure check)
+2. **Dispatch** — If `type: patent`, delegates to `gen_patent.py`; otherwise proceeds with paper generation
+3. **Generate JS** — Produces a Node.js script using the `docx-js` API
+4. **Execute** — Runs the JS script via `node` to create the DOCX
+5. **Validate** — Verifies the output is a well-formed DOCX (ZIP structure check)
 
 The generated JS script follows critical `docx-js` rules: explicit page sizes, proper numbering config for lists (never unicode bullets), dual table widths with DXA units, `ShadingType.CLEAR` for table cells, and `PageBreak` inside `Paragraph` elements.
 
