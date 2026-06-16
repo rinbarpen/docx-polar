@@ -6749,3 +6749,31 @@ fonts:
 - 黑体
 - 楷体_GB2312
 - Calibri
+
+caption_templates:
+  figure_cn:
+    prefix: "图 "
+    suffix: ""
+    seq_name: "Figure"
+  figure_en:
+    prefix: "Fig. "
+    suffix: ". "
+    seq_name: "Figure"
+  table_cn:
+    prefix: "表 "
+    suffix: ""
+    seq_name: "Table"
+  table_en:
+    prefix: "Table "
+    suffix: ". "
+    seq_name: "Table"
+
+toc:
+  label: "目录"
+  headingStyleRange: "1-3"
+
+features:
+  keep_together: true
+  auto_numbering: true
+  clickable_toc: true
+  clickable_cross_refs: true

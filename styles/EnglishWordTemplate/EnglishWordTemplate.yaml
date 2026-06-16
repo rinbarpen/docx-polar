@@ -2426,3 +2426,23 @@ fonts:
 - MS Mincho
 - Calibri Light
 - Calibri
+
+caption_templates:
+  figure_en:
+    prefix: "Fig. "
+    suffix: ". "
+    seq_name: "Figure"
+  table_en:
+    prefix: "Table "
+    suffix: ". "
+    seq_name: "Table"
+
+toc:
+  label: "Table of Contents"
+  headingStyleRange: "1-3"
+
+features:
+  keep_together: true
+  auto_numbering: true
+  clickable_toc: true
+  clickable_cross_refs: true
