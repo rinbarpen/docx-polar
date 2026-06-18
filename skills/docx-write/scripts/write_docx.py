@@ -1387,6 +1387,14 @@ def main():
         help="Version number for output path",
     )
     parser.add_argument(
+        "--humanize", action="store_true", default=None,
+        help="Enable text humanization (default: on, use --no-humanize to disable)",
+    )
+    parser.add_argument(
+        "--no-humanize", action="store_false", dest="humanize", default=None,
+        help="Disable text humanization",
+    )
+    parser.add_argument(
         "--skip-validate", action="store_true",
         help="Skip DOCX validation",
     )
@@ -1441,6 +1449,14 @@ def main():
     # Apply template defaults to spec (spec takes priority)
     if template:
         spec = _apply_template_defaults(spec, template)
+
+    # Humanization status: spec field takes priority, falls back to CLI flag, default ON
+    humanize = spec.get("humanize", True)
+    if args.humanize is not None:
+        humanize = args.humanize
+    spec["humanize"] = humanize
+    humanize_status = "ON" if humanize else "OFF"
+    print(f"Humanization: {humanize_status}")
 
     output_path = args.output or resolve_output_path(spec, args.input_file or "preview", args)
 

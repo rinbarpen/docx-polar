@@ -342,16 +342,66 @@ Preview content includes: bilingual title, authors, abstracts, keywords, TOC, sa
 
 1. **Load spec** — Python reads the YAML/JSON specification
 2. **Dispatch** — If `type: patent`, delegates to `gen_patent.py`; otherwise proceeds with paper generation
-3. **Generate JS** — Produces a Node.js script using the `docx-js` API, with support for:
+3. **Humanize** — If `humanize: true` (default), content text is humanized using the appropriate sub-skill:
+   - English content → `humanizer` (33+ patterns: inflated symbolism, promotional language, AI vocabulary, etc.)
+   - Chinese content → `humanizer-zh` (localized AI-trace removal)
+   - Can be disabled via `humanize: false` in spec or `--no-humanize` CLI flag
+4. **Generate JS** — Produces a Node.js script using the `docx-js` API, with support for:
    - SEQ fields (`{{seq:NAME}}`) for auto-numbering figures, tables, equations
    - Bookmarks and clickable cross-references (`{{ref:ID}}`, `{{pageref:ID}}`)
    - Table of Contents with heading hyperlinks
    - Keep-together paragraph properties for image/table caption binding
-4. **Execute** — Runs the JS script via `node` to create the DOCX
-5. **Post-process math** — Replaces formula placeholder markers with native OMML via pandoc
-6. **Validate** — Verifies the output is a well-formed DOCX (ZIP structure check)
+5. **Execute** — Runs the JS script via `node` to create the DOCX
+6. **Post-process math** — Replaces formula placeholder markers with native OMML via pandoc
+7. **Validate** — Verifies the output is a well-formed DOCX (ZIP structure check)
 
 The generated JS script follows critical `docx-js` rules: explicit page sizes, proper numbering config for lists (never unicode bullets), dual table widths with DXA units, `ShadingType.CLEAR` for table cells, and `PageBreak` inside `Paragraph` elements.
+
+## Humanizer Integration (Sub-skills)
+
+When generating content via `docx-write`, text can be automatically humanized to remove AI-generated patterns. Two humanizer sub-skills are available:
+
+| Sub-skill | Language | Description |
+|-----------|----------|-------------|
+| `humanizer` | English (en) | Removes 33+ AI-writing patterns from English text |
+| `humanizer-zh` | Chinese (zh) | Removes AI-writing traces from Chinese text, localized for CN content |
+
+### Activation
+
+- **Default: ON** — humanization is enabled by default during docx-write content generation
+- **Disable via spec:** set `humanize: false` in the YAML spec
+- **Disable via CLI:** pass `--no-humanize` to `write_docx.py`
+
+### Auto Language Selection
+
+The system automatically selects the appropriate humanizer based on content language:
+
+| Spec Language | Humanizer Used |
+|---------------|----------------|
+| `language: en` or English content detected | `humanizer` (English) |
+| `language: zh` or Chinese content detected | `humanizer-zh` (Chinese) |
+
+Language is inferred from the spec `language` field, or auto-detected from the dominant script in titles, abstracts, and body text.
+
+### Example
+
+```yaml
+# spec.yaml — humanization enabled (default)
+title:
+  cn: "基于深度学习的目标检测方法研究"
+  en: "Deep Learning for Object Detection"
+humanize: true   # optional, true by default
+```
+
+```yaml
+# spec.yaml — humanization disabled
+humanize: false
+```
+
+```bash
+# CLI: disable humanization
+python scripts/write_docx.py paper.yaml --no-humanize
+```
 
 ## CLI Reference
 
@@ -363,6 +413,7 @@ The generated JS script follows critical `docx-js` rules: explicit page sizes, p
 | `--category`, `-c` | none | Template category for output path (e.g. `北交模板`) |
 | `--paper`, `-p` | spec stem | Paper name for output path |
 | `--version`, `-v` | auto-detect | Version number |
+| `--humanize` / `--no-humanize` | on | Enable/disable AI text humanization (auto language selection) |
 | `--skip-validate` | off | Skip DOCX validation |
 | `--verbose`, `-V` | off | Show generated JavaScript code |
 
